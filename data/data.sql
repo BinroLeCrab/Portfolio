@@ -16,7 +16,7 @@ CREATE TABLE projets (
     visuel TEXT,
     detail TEXT,
     annee_form CHAR(4),
-    PRIMARY KEY (id_projets)
+    PRIMARY KEY (id_projet)
 ) DEFAULT CHARSET=utf8;
 
 
