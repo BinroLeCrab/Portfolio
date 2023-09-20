@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 define("CHARGE_AUTOLOAD",true);
 
 require_once("inc/poo.inc.php");
@@ -11,15 +13,15 @@ require_once("inc/output.php");
 
 envoiEnTetesHTTP();
 
-if (isset($_GET['id_groupe']))
+if (isset($_GET['id_projet']))
 {
-    $id_groupe=$_GET['id_groupe'];
-    echoDetailsSurUnGroupe($BD->listeG,$id_groupe);
+    $id_projet=$_GET['id_projet'];
+    echoDetailsSurUnProjet($BD->listP,$id_projet);
     $_SESSION['url'] = $_SERVER['REQUEST_URI'];
 
 }else
 {
-    echoPageAccueil($BD->listeG);
+    echoPageAccueil($BD->listeP);
     $_SESSION['url'] = $_SERVER['REQUEST_URI'];
 };
 
