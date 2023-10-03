@@ -51,6 +51,14 @@ class Projet {
         $this->outils = $commOutil ->outilProjet($id); 
     }
 
+    public function affListe()
+    {
+        $reponse = "";
+        $reponse.=sprintf("<p>%s</p>\n", $this->nom);
+
+        return $reponse;
+    }
+
     /*public function AffAjoutComment(){
         $reponse = "";
 
@@ -77,7 +85,7 @@ class Projet {
         $local = "";
         $local.=sprintf("index.php?id_groupe=%s#formAddComm", $this->id_groupe);
         header("Location: $local");
-    }
+    } 
 
     public function affListe()
     {

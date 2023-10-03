@@ -139,11 +139,11 @@ function echoHero()
 function echoListe($liste)
 {
   	printf("			<section id=\"Liste\">\n");
-  	printf("				<h2>Les Artistes</h2>\n");
+  	printf("				<h2>Mes derniers projets</h2>\n");
 	printf("				<div class=\"grilleListe\">\n");
-  	foreach ($liste as $groupe)
+  	foreach ($liste as $projet)
   	{
-    	echo $groupe->affListe();
+    	echo $projet->affListe();
  	};
 	
 	printf("				</div>\n");
@@ -167,7 +167,7 @@ function echoBalisesFermantesBodyEtHTML()
 
 function echoPageAccueil($liste)
 {
-  	echoBaliseOuvranteEtEnTeteHTML("In My Ears", "accueil");
+  	echoBaliseOuvranteEtEnTeteHTML("Robin Vigier", "accueil");
   	echoBaliseOuvranteBody("acc");
   	echoBackground();
   	echoHeader();
