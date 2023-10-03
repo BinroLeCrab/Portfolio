@@ -16,7 +16,7 @@ envoiEnTetesHTTP();
 if (isset($_GET['id_projet']))
 {
     $id_projet=$_GET['id_projet'];
-    echoDetailsSurUnProjet($BD->listP,$id_projet);
+    echoDetailsSurUnProjet($BD->listeP,$id_projet);
     $_SESSION['url'] = $_SERVER['REQUEST_URI'];
 
 }else

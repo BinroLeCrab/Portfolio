@@ -54,7 +54,24 @@ class Projet {
     public function affListe()
     {
         $reponse = "";
-        $reponse.=sprintf("<p>%s</p>\n", $this->nom);
+        $reponse.=sprintf("<a href=\"index.php?id_projet=%s\" class=\"liendivgroupe\">%s</a>\n", $this->id_projet,$this->nom);
+
+        return $reponse;
+    }
+
+    public function affDetail()
+    {
+        $reponse = "";
+
+        $reponse.=sprintf("             <div class=\"ban\">\n");
+        $reponse.=sprintf("                 <a href=\"index.php\" class=\"back\">\n");
+        $reponse.=sprintf("                     <img src=\"img/gen/arrowback.svg\" alt=\"Icone retour\" class=\"iconBack\" id=\"iconBackW\"/>\n");
+        $reponse.=sprintf("                     <img src=\"img/gen/arrowbackN.svg\" alt=\"Icone retour\" class=\"iconBack\" id=\"iconBackN\"/>\n");
+        $reponse.=sprintf("                     <p>Retour</p>\n");
+        $reponse.=sprintf("                 </a>\n");
+        $reponse.=sprintf("             </div>\n");
+
+        $reponse.=sprintf("         <h1>%s</h1>\n", $this->nom);
 
         return $reponse;
     }

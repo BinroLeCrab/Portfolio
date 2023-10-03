@@ -182,21 +182,21 @@ function echoPageAccueil($liste)
 
 // Envoi au client de tout ce qui permet l'affichage d'une page specifique sur un film
 
-function echoDetailsSurUnGroupe($liste,$id_groupe)
+function echoDetailsSurUnProjet($liste,$id_projet)
 {
-  	$groupe_trouve=0;
+  	$projet_trouve=0;
   	foreach ($liste as $ligne)
   	{
-		if ((isset($ligne))&&(isset($ligne->id_groupe))&&($ligne->id_groupe==$id_groupe))
+		if ((isset($ligne))&&(isset($ligne->id_projet))&&($ligne->id_projet==$id_projet))
     	{
-      		$groupe_trouve=1;
-     		$groupe=$ligne;
+      		$projet_trouve=1;
+     		$projet=$ligne;
     	};
   	};
-  	echoBaliseOuvranteEtEnTeteHTML($groupe->nom, "detail");
-  	echoBaliseOuvranteBody($groupe->id_groupe);
+  	echoBaliseOuvranteEtEnTeteHTML($projet->nom, "detail");
+  	echoBaliseOuvranteBody($projet->id_projet);
   	echoHeader();
-	echo $groupe->affDetail();
+	echo $projet->affDetail();
 	echoPiedDePage();
   	echoBalisesFermantesBodyEtHTML();
 	echoSignature();
