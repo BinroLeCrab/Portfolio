@@ -30,7 +30,7 @@ function echoBaliseOuvranteEtEnTeteHTML($titre, $infocss)
 	printf("		<link href=\"https://fonts.googleapis.com/css2?family=Sofia+Sans&display=swap\" rel=\"stylesheet\"/> \n");
 
     //lien CSS
-	printf("		<link rel=\"stylesheet\" type=\"text/css\" href=\"css/rock.css\"/>\n");
+	printf("		<link rel=\"stylesheet\" type=\"text/css\" href=\"style/style.css\"/>\n");
 
 	if ($infocss == "accueil")
 	{
