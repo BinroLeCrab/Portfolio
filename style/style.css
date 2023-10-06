@@ -5,3 +5,7 @@ body {
 a {
     cursor: url(../img/asset/Hand_perso.svg), auto;
 }
+
+p {
+    cursor: url(../img/asset/Txt_perso.svg), auto;
+}
