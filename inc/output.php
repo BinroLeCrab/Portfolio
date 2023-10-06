@@ -9,17 +9,17 @@ function envoiEnTetesHTTP()
 	header("Content-Transfer-Encoding: 8bit");
 };
 
-function echoBaliseOuvranteEtEnTeteHTML($titre, $infocss)
+function echoBaliseOuvranteEtEnTeteHTML($titre)
 {
 	printf("<!DOCTYPE html>\n");
 
-	printf("<html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"%s\" lang=\"%s\" dir=\"ltr\">\n", langueDuSite, langueDuSite);
+	printf("<html lang=\"%s\">\n", langueDuSite, langueDuSite);
 
 	printf("	<head>\n");
 
-	printf("		<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"/>\n");
+	printf("		<meta charset=\"utf-8\"/>\n");
 	printf("		<meta name=\"Author\" lang=\"fr\" content=\"Robin Vigier\"/>\n");
-	printf("		<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\"/>\n");
+	printf("		<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0 shrink-to-fit=no\"\/>\n");
 	
     //lien police et favicon
     printf("		<link rel=\"icon\" href=\"img/gen/LogoN.svg\"/> \n");
@@ -32,25 +32,6 @@ function echoBaliseOuvranteEtEnTeteHTML($titre, $infocss)
     //lien CSS
 	printf("		<link rel=\"stylesheet\" type=\"text/css\" href=\"style/style.css\"/>\n");
 
-	if ($infocss == "accueil")
-	{
-		printf("		<link rel=\"stylesheet\" type=\"text/css\" href=\"css/rock_accueil.css\"/>\n");
-	}
-
-	if ($infocss == "connexion")
-	{
-		printf("		<link rel=\"stylesheet\" type=\"text/css\" href=\"css/rock_connexion.css\"/>\n");
-	}
-
-	if ($infocss == "mention")
-	{
-		printf("		<link rel=\"stylesheet\" type=\"text/css\" href=\"css/rock_mention.css\"/>\n");
-	}
-
-	if ($infocss == "detail")
-	{
-		printf("		<link rel=\"stylesheet\" type=\"text/css\" href=\"css/rock_detail.css\"/>\n");
-	}
 
 	//lien JS
 	printf("		<script type=\"text/javascript\" src=\"js/rock.js\"></script>\n");
@@ -167,7 +148,7 @@ function echoBalisesFermantesBodyEtHTML()
 
 function echoPageAccueil($liste)
 {
-  	echoBaliseOuvranteEtEnTeteHTML("Robin Vigier", "accueil");
+  	echoBaliseOuvranteEtEnTeteHTML("Robin Vigier");
   	echoBaliseOuvranteBody("acc");
   	echoBackground();
   	echoHeader();
@@ -193,7 +174,7 @@ function echoDetailsSurUnProjet($liste,$id_projet)
      		$projet=$ligne;
     	};
   	};
-  	echoBaliseOuvranteEtEnTeteHTML($projet->nom, "detail");
+  	echoBaliseOuvranteEtEnTeteHTML($projet->nom);
   	echoBaliseOuvranteBody($projet->id_projet);
   	echoHeader();
 	echo $projet->affDetail();
@@ -204,7 +185,7 @@ function echoDetailsSurUnProjet($liste,$id_projet)
 
 function echoPageConnexion($Mire)
 {
-	echoBaliseOuvranteEtEnTeteHTML("Connexion", "connexion");
+	echoBaliseOuvranteEtEnTeteHTML("Connexion");
   	echoBaliseOuvranteBody("con");
   	echoBackground();
 	echo $Mire->echoHeaderConnexion();
@@ -220,7 +201,7 @@ function echoPageConnexion($Mire)
 
 function echoPageMention($Vue)
 {
-	echoBaliseOuvranteEtEnTeteHTML("Mention Légales", "mention");
+	echoBaliseOuvranteEtEnTeteHTML("Mention Légales");
   	echoBaliseOuvranteBody("men");
   	echoBackground();
 	echo $Vue->echoHeaderMention();
