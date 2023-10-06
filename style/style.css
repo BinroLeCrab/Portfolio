@@ -1,3 +1,7 @@
 body {
-    cursor: url(../img/asset/Mouse_perso.svg), auto;
+    cursor: url(../img/asset/Cursor_perso.svg), auto;
+}
+
+a {
+    cursor: url(../img/asset/Hand_perso.svg), auto;
 }
