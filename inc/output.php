@@ -22,19 +22,19 @@ function echoBaliseOuvranteEtEnTeteHTML($titre)
 	printf("		<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0 shrink-to-fit=no\"\/>\n");
 	
     //lien police et favicon
-    printf("		<link rel=\"icon\" href=\"img/gen/LogoN.svg\"/> \n");
+    /*printf("		<link rel=\"icon\" href=\"img/gen/LogoN.svg\"/> \n");
 	printf("		<link rel=\"preconnect\" href=\"https://fonts.googleapis.com\"/> \n");
 	printf("		<link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin/>\n");
 	printf("		<link href=\"https://fonts.googleapis.com/css2?family=Righteous&display=swap\" rel=\"stylesheet\"/>\n");
 	printf("		<link href=\"https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap\" rel=\"stylesheet\"/>\n");
-	printf("		<link href=\"https://fonts.googleapis.com/css2?family=Sofia+Sans&display=swap\" rel=\"stylesheet\"/> \n");
+	printf("		<link href=\"https://fonts.googleapis.com/css2?family=Sofia+Sans&display=swap\" rel=\"stylesheet\"/> \n");*/
 
     //lien CSS
 	printf("		<link rel=\"stylesheet\" type=\"text/css\" href=\"style/style.css\"/>\n");
 
 
 	//lien JS
-	printf("		<script type=\"text/javascript\" src=\"js/rock.js\"></script>\n");
+	printf("		<script type=\"text/javascript\" src=\"js/script.js\"></script>\n");
 
 	// Titre
 	printf("		<title>%s</title>\n",$titre);
