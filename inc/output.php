@@ -11,155 +11,181 @@ function envoiEnTetesHTTP()
 
 function echoBaliseOuvranteEtEnTeteHTML($titre)
 {
-	printf("<!DOCTYPE html>\n");
+	$reponse = "";
 
-	printf("<html lang=\"%s\">\n", langueDuSite, langueDuSite);
+    $reponse.=sprintf("<!DOCTYPE html>\n");
 
-	printf("	<head>\n");
+	$reponse.=sprintf("<html lang=\"%s\">\n", langueDuSite, langueDuSite);
 
-	printf("		<meta charset=\"utf-8\"/>\n");
-	printf("		<meta name=\"Author\" lang=\"fr\" content=\"Robin Vigier\"/>\n");
-	printf("		<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0 shrink-to-fit=no\"\/>\n");
+	$reponse.=sprintf("	<head>\n");
+
+	$reponse.=sprintf("		<meta charset=\"utf-8\"/>\n");
+	$reponse.=sprintf("		<meta name=\"Author\" lang=\"fr\" content=\"Robin Vigier\"/>\n");
+	$reponse.=sprintf("		<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0 shrink-to-fit=no\"\/>\n");
 	
-    //lien police et favicon
-    /*printf("		<link rel=\"icon\" href=\"img/gen/LogoN.svg\"/> \n");
-	printf("		<link rel=\"preconnect\" href=\"https://fonts.googleapis.com\"/> \n");
-	printf("		<link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin/>\n");
-	printf("		<link href=\"https://fonts.googleapis.com/css2?family=Righteous&display=swap\" rel=\"stylesheet\"/>\n");
-	printf("		<link href=\"https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap\" rel=\"stylesheet\"/>\n");
-	printf("		<link href=\"https://fonts.googleapis.com/css2?family=Sofia+Sans&display=swap\" rel=\"stylesheet\"/> \n");*/
-
     //lien CSS
-	printf("		<link rel=\"stylesheet\" type=\"text/css\" href=\"style/style.css\"/>\n");
+	$reponse.=sprintf("		<link rel=\"stylesheet\" type=\"text/css\" href=\"style/style.css\"/>\n");
 
 
 	//lien JS
-	printf("		<script type=\"text/javascript\" src=\"js/script.js\"></script>\n");
+	$reponse.=sprintf("		<script type=\"text/javascript\" src=\"js/script.js\"></script>\n");
 
 	// Titre
-	printf("		<title>%s</title>\n",$titre);
-	printf("	</head>\n");
+	$reponse.=sprintf("		<title>%s</title>\n",$titre);
+	$reponse.=sprintf("	</head>\n");
+
+	return $reponse;
 };
 
 function echoBaliseOuvranteBody($id)
 {
-	printf("	<body id=\"%s\">\n", $id);
-};
+	$reponse = "";
 
-function echoBackground()
-{
-	printf("		<section class=\"bg\">\n");
-	/*printf("			<img class=\"noise\" src=\"img/gen/background/Noise.png\"/>\n");
-	printf("			<div class=\"satur\"></div>\n");
-	printf("			<img id=\"vector1\" class=\"\" src=\"img/gen/background/Vector_01.svg\" alt=\"vecteur 1\"/>\n");
-	printf("			<img id=\"vector2\" class=\"\" src=\"img/gen/background/Vector_02.svg\" alt=\"vecteur 2\"/>\n");
-	printf("			<img id=\"vector3\" class=\"\" src=\"img/gen/background/Vector_03.svg\" alt=\"vecteur 3\"/>\n");
-	printf("			<img id=\"vector4\" class=\"\" src=\"img/gen/background/Vector_04.svg\" alt=\"vecteur 4\"/>\n");
-	printf("			<img id=\"vector5\" class=\"\" src=\"img/gen/background/Vector_05.svg\" alt=\"vecteur 5\"/>\n");
-	printf("			<img id=\"vector6\" class=\"\" src=\"img/gen/background/Vector_06.svg\" alt=\"vecteur 6\"/>\n");
-	printf("			<img id=\"vector7\"class=\"\" src=\"img/gen/background/Vector_07.svg\" alt=\"vecteur 7\"/>\n");*/
-	printf("		</section>\n");
+    $reponse.=sprintf("	<body id=\"%s\">\n", $id);
+
+	return $reponse;
 };
 
 function echoHeader()
 {
-	printf("		<nav id=\"header\" class=\"\">\n");
-    printf("            <a href=\"%s\" class=\"logo\">\n",$_SERVER['PHP_SELF']);
-    printf("                <img src=\"img/gen/Logo.svg\" alt=\"Logo\"/>\n");
-    printf("                <p>In My Ears</p>\n");
-    printf("            </a>\n");
-	printf("			<div class=\"connexion\">\n");
-	if (isset($_SESSION['pseudo']) and isset($_SESSION['pass']))
-	{
-		printf("				<p>%s</p>\n", $_SESSION['utilisateur'][0]['id_util']);
-		printf("				<img src=\"%s\" class=\"user_pdp\" alt=\"photo de profil utilisateur\"/>", $_SESSION['utilisateur'][0]['img_pdp']);
-		printf("				<a href =\"index.php?DECO\">DECONNEXION</a>\n");
-	}else{
-		printf("				<a href =\"index.php?CONNEXION\">CONNEXION</a>\n");
-	}
-	printf("			</div>\n");
-    printf("        </nav>\n");
+	$reponse = "";
+
+    $reponse.=sprintf("		<nav id=\"header\" class=\"\">\n");
+    $reponse.=sprintf("            <a href=\"%s\" class=\"\">\n",$_SERVER['PHP_SELF']);
+    $reponse.=sprintf("                <img src=\"img/asset/Logo.svg\" alt=\"Logo\"/>\n");
+    $reponse.=sprintf("                <p>Robin Vigier</p>\n");
+    $reponse.=sprintf("            </a>\n");
+	$reponse.=sprintf("            <a href=\"\" class=\"\">Accueil</a>\n");
+	$reponse.=sprintf("            <a href=\"\" class=\"\">Projets</a>\n");
+	$reponse.=sprintf("            <a href=\"\" class=\"\">À Propos</a>\n");
+	$reponse.=sprintf("            <a href=\"\" class=\"\">Contact</a>\n");
+	
+    $reponse.=sprintf("		</nav>\n");
+
+	return $reponse;
 };
 
-
-//Function d'affichage détails
-
-function echoTitreManga($manga)
-{
-	printf("		<div class=\"ban\" id=\"b_%s\">\n",$manga->titre_id);
-	printf("			<h2 class=\"titre\">%s</h2>\n",$manga->titre);
-	if (isset($manga->auteur))
-	{
-		printf("			<h3 class=\"titre-a\">%s</h3>\n",$manga->auteur);
-	};
-	printf("		</div>\n");
-};
 
 // Function d'affichage du Hero Banner
 
 function echoHero()
 {
-	printf("			<section class=\"heroban\">\n");
-	printf("				<div class=\"spaceHero\">\n");
-	printf("				</div>\n");
-	printf("				<div class=\"heroinfo\">\n");
-	printf("					<div class=\"herologo\">\n");
-	printf("						<img src = \"img/gen/Logo.svg\" alt=\"logo\"/>\n");
-	printf("						<h1>In My Ears</h1>\n");
-	printf("					</div>\n");
-	printf("					<p>J'adore partager mes recommandations musicales, donc j'en ai fait un site.</p>\n");
-	printf("				</div>\n");
-	printf("				<a class=\"divarrow\" href=\"#Liste\">\n");
-	printf("					<img class=\"arrowgif\" src=\"img/gen/arrow.gif\" alt=\"flèche animé\"/>\n");
-	printf("				</a>\n");
-	printf("			</section>\n");
+	$reponse = "";
+
+    $reponse.=sprintf("			<section class=\"heroban\">\n");
+	$reponse.=sprintf("				<div class=\"herotxt\">\n");
+	$reponse.=sprintf("					<h1>Robin Vigier</h1>\n");
+	$reponse.=sprintf("					<h2>Etudiant BUT MMI</h2>\n");
+	$reponse.=sprintf("				</div>\n");
+	$reponse.=sprintf("				<div class=\"heroarrow\">\n");
+	$reponse.=sprintf("					<!--Flèche-->\n");
+	$reponse.=sprintf("				</div>\n");
+	$reponse.=sprintf("				<div class=\"herotxtillu\">\n");
+	$reponse.=sprintf("					<!--Illu-->\n");
+	$reponse.=sprintf("				</div>\n");
+	$reponse.=sprintf("			</section>\n");
+
+	return $reponse;
 };
 
 // Function d'affichage de la liste
 
 function echoListe($liste)
 {
-  	printf("			<section id=\"Liste\">\n");
-  	printf("				<h2>Mes derniers projets</h2>\n");
-	printf("				<div class=\"grilleListe\">\n");
+	$reponse = "";
+
+	$reponse.=sprintf("			<section id=\"main\">\n");
+	$reponse.=sprintf("				<article id=\"liste\">\n");
+	$reponse.=sprintf("					<h2>Mes derniers projets</h2>\n");
+	$reponse.=sprintf("					<div class=\"grilleListe\">\n");
   	foreach ($liste as $projet)
   	{
-    	echo $projet->affListe();
+    	$reponse.= $projet->affListe();
  	};
 	
-	printf("				</div>\n");
-  	printf("			</section>\n");
+	$reponse.=sprintf("					</div>\n");
+	$reponse.=sprintf("				</article>\n");
+
+	return $reponse;
 };
+
+function echoInfoBlock()
+{
+	$reponse = ""; 
+
+	$reponse.=sprintf("				<article id=\"info\">\n");
+	$reponse.=sprintf("					<h2>Qui Je Suis ?</h2>\n");
+	$reponse.=sprintf("					<div class=\"\">\n");
+	$reponse.=sprintf("						<!--Image-->\n");
+	$reponse.=sprintf("						<!--Paragraphe-->\n");
+	$reponse.=sprintf("					</div>\n");
+	$reponse.=sprintf("				</article>\n");
+
+	return $reponse;
+}
+
+function echoSkillBlock()
+{
+	$reponse = ""; 
+
+	$reponse.=sprintf("				<article id=\"skill\">\n");
+	$reponse.=sprintf("					<h2>Je Maitrise ...</h2>\n");
+	$reponse.=sprintf("					<div class=\"\">\n");
+	$reponse.=sprintf("						<!--Image-->\n");
+	$reponse.=sprintf("					</div>\n");
+	$reponse.=sprintf("				</article>\n");
+
+	return $reponse;
+}
 
 function echoPiedDePage()
 {
-  	printf("		<footer class=\"pied_de_page\">\n");
-  	printf("			<p><a href=\"https://bento.me/robinv\">VIGIER Robin</a>, 2023. Illustrations&#x202F;: tous droits r&#xE9;serv&#xE9;s. <a href=\"index.php?MENTION\">Mentions l&#xE9;gales</a>.\n");/* | <a id=\"button_anim\">Activer les animations</a></p>\n");*/
-  	printf("		</footer>\n");
+  	$reponse = "";
+	
+	$reponse.=sprintf("		</section>\n");
+	$reponse.=sprintf("		<footer class=\"pied_de_page\">\n");
+	$reponse.=sprintf("			<p><a href=\"https://bento.me/robinv\">VIGIER Robin</a>, 2023. Illustrations&#x202F;: tous droits r&#xE9;serv&#xE9;s. <a href=\"index.php?MENTION\">Mentions l&#xE9;gales</a>.\n");/* | <a id=\"button_anim\">Activer les animations</a></p>\n");*/
+	$reponse.=sprintf("		</footer>\n");
+
+	return $reponse;
+
 }
 
 function echoBalisesFermantesBodyEtHTML()
 {
-  	printf("	</body>\n");
-  	printf("</html>\n");
+	$reponse = "";
+	
+	$reponse.=sprintf("	</body>\n");
+	$reponse.=sprintf("</html>\n");
+
+	return $reponse;
+
 };
 
 // Envoi au client de tout ce qui permet l'affichage du programme complet du festival
 
 function echoPageAccueil($liste)
 {
-  	echoBaliseOuvranteEtEnTeteHTML("Robin Vigier");
-  	echoBaliseOuvranteBody("acc");
-  	echoBackground();
-  	echoHeader();
-  	printf("		<main>\n");
-  	echoHero();
-  	echoListe($liste);
-  	printf("		</main>\n");
-  	echoPiedDePage();
-  	echoBalisesFermantesBodyEtHTML();
-	echoSignature();
+	$reponse = "";
+
+  	$reponse.= echoBaliseOuvranteEtEnTeteHTML("Robin Vigier");
+  	$reponse.= echoBaliseOuvranteBody("acc");
+  	$reponse.= echoHeader();
+  	$reponse.= sprintf("		<main>\n");
+  	$reponse.= echoHero();
+  	$reponse.= echoListe($liste);
+  	$reponse.= echoInfoBlock();
+  	$reponse.= echoSkillBlock();
+  	$reponse.= sprintf("		</main>\n");
+  	$reponse.= echoPiedDePage();
+  	$reponse.= echoBalisesFermantesBodyEtHTML();
+	$reponse.= echoSignature();
+	
+	return $reponse;
 };
+
+
+// ---------------------------------------------------------------------------
 
 // Envoi au client de tout ce qui permet l'affichage d'une page specifique sur un film
 
