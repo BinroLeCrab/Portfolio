@@ -24,6 +24,7 @@ function echoBaliseOuvranteEtEnTeteHTML($titre)
 	$reponse.=sprintf("		<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0 shrink-to-fit=no\"\/>\n");
 	
     //lien CSS
+	$reponse.=sprintf("		<link rel=\"stylesheet\" type=\"text/css\" href=\"style/root.css\"/>\n");
 	$reponse.=sprintf("		<link rel=\"stylesheet\" type=\"text/css\" href=\"style/style.css\"/>\n");
 
 

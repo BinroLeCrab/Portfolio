@@ -1,0 +1,18 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+:root {
+    --Pointer: url(../img/asset/Cursor_perso.svg);
+    --Hand: url(../img/asset/Hand_perso.svg);
+}
+
+body {
+    cursor: var(--Pointer), auto;
+}
+
+a {
+    cursor: var(--Hand), auto;
+}
