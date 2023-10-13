@@ -134,6 +134,7 @@ function echoSkillBlock()
 	$reponse.=sprintf("						<!--Image-->\n");
 	$reponse.=sprintf("					</div>\n");
 	$reponse.=sprintf("				</article>\n");
+	$reponse.=sprintf("			</section>\n");
 
 	return $reponse;
 }
@@ -142,7 +143,6 @@ function echoPiedDePage()
 {
   	$reponse = "";
 	
-	$reponse.=sprintf("		</section>\n");
 	$reponse.=sprintf("		<footer class=\"pied_de_page\">\n");
 	$reponse.=sprintf("			<p><a href=\"https://bento.me/robinv\">VIGIER Robin</a>, 2023. Illustrations&#x202F;: tous droits r&#xE9;serv&#xE9;s. <a href=\"index.php?MENTION\">Mentions l&#xE9;gales</a>.\n");/* | <a id=\"button_anim\">Activer les animations</a></p>\n");*/
 	$reponse.=sprintf("		</footer>\n");
