@@ -65,8 +65,6 @@ class Projet {
 
         $reponse.=sprintf("             <div class=\"ban\">\n");
         $reponse.=sprintf("                 <a href=\"index.php\" class=\"back\">\n");
-        $reponse.=sprintf("                     <img src=\"img/gen/arrowback.svg\" alt=\"Icone retour\" class=\"iconBack\" id=\"iconBackW\"/>\n");
-        $reponse.=sprintf("                     <img src=\"img/gen/arrowbackN.svg\" alt=\"Icone retour\" class=\"iconBack\" id=\"iconBackN\"/>\n");
         $reponse.=sprintf("                     <p>Retour</p>\n");
         $reponse.=sprintf("                 </a>\n");
         $reponse.=sprintf("             </div>\n");

@@ -163,8 +163,6 @@ function echoBalisesFermantesBodyEtHTML()
 
 };
 
-// Envoi au client de tout ce qui permet l'affichage du programme complet du festival
-
 function echoPageAccueil($liste)
 {
 	$reponse = "";
@@ -192,6 +190,7 @@ function echoPageAccueil($liste)
 
 function echoDetailsSurUnProjet($liste,$id_projet)
 {
+	$reponse = "";
   	$projet_trouve=0;
   	foreach ($liste as $ligne)
   	{
@@ -201,13 +200,16 @@ function echoDetailsSurUnProjet($liste,$id_projet)
      		$projet=$ligne;
     	};
   	};
-  	echoBaliseOuvranteEtEnTeteHTML($projet->nom);
-  	echoBaliseOuvranteBody($projet->id_projet);
-  	echoHeader();
-	echo $projet->affDetail();
-	echoPiedDePage();
-  	echoBalisesFermantesBodyEtHTML();
-	echoSignature();
+
+  	$reponse.=echoBaliseOuvranteEtEnTeteHTML($projet->nom);
+  	$reponse.=echoBaliseOuvranteBody($projet->id_projet);
+  	$reponse.=echoHeader();
+	$reponse.= $projet->affDetail();
+	$reponse.=echoPiedDePage();
+	$reponse.=echoBalisesFermantesBodyEtHTML();
+	$reponse.=echoSignature();
+
+	return $reponse;
 };
 
 function echoPageConnexion($Mire)
