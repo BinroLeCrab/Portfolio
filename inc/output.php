@@ -242,11 +242,15 @@ function echoPageMention($Vue)
 
 function echoSignature()
 {
-	printf("<!--		_____     _____ 			-->\n");
-	printf("<!--	   |  _  |   |  _  |			-->\n");
-	printf("<!--	  -| | | |---| | | |-			-->\n");
-	printf("<!--	   |_____| 7 |_____|  ~B!nro~	-->\n");
-	printf("<!--									-->\n");
+	$reponse="";
+
+	$reponse.="<!--		_____     _____ 			-->\n";
+	$reponse.="<!--	   |  _  |   |  _  |			-->\n";
+	$reponse.="<!--	  -| | | |---| | | |-			-->\n";
+	$reponse.="<!--	   |_____| 7 |_____|  ~B!nro~	-->\n";
+	$reponse.="<!--									-->\n";
+
+	return $reponse;
 };
 
 /*   _____     _____
