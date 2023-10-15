@@ -7,5 +7,7 @@
 			"path": "../../GitHub/In-My-Ears"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Portfolio"
+	}
 }
