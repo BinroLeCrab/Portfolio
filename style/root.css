@@ -5,8 +5,22 @@
 }
 
 :root {
+
+    /* Cursor */
     --Pointer: url(../img/asset/Cursor_perso.svg);
     --Hand: url(../img/asset/Hand_perso.svg);
+
+    /* Images */
+    --Bkg-img : url(../img/asset/Paper.jpg);
+
+    /* Couleur Principales*/
+    --Black: #1e1e1e;
+    --White: #f6f6f6;
+    --Blue : #264de4;
+
+    /* Radius  */
+    --Rad-int: 10px;
+    --Rad-ext: 20px;
 }
 
 body {
@@ -16,3 +30,9 @@ body {
 a {
     cursor: var(--Hand), auto;
 }
+
+/*   _____     _____
+    |  _  |   |  _  |
+   -| | | |---| | | |-
+    |_____| 7 |_____|  ~B!nro~
+*/
