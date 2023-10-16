@@ -23,8 +23,49 @@
     --Rad-ext: 20px;
 }
 
+/* Font */
+
+@font-face {
+	font-family: 'Barracuda';
+	font-weight: 400;
+	src: url(‘/font/Barracuda/Barracuda-regular.ttf’) format(‘truetype’)
+}
+
+@font-face {
+	font-family: 'Barracuda';
+	font-weight: 700;
+	src: url(‘/font/Barracuda/Barracuda-Bold.ttf’) format(‘truetype’)
+}
+
+@font-face {
+	font-family: 'Stolzl';
+	font-weight: 400;
+	src: url(‘/font/Stolzl/Stolzl-Regular.woff2’) format(‘woff2’),
+        url(‘/font/Stolzl/Stolzl-Regular.ttf’) format(‘truetype’)
+}
+
+@font-face {
+	font-family: 'Stolzl';
+	font-weight: 500;
+	src: url(‘/font/Stolzl/Stolzl-Medium.woff2’) format(‘woff2’),
+        url(‘/font/Stolzl/Stolzl-Medium.ttf’) format(‘truetype’)
+}
+
+@font-face {
+	font-family: 'Stolzl';
+	font-weight: 700;
+	src: url(‘/font/Stolzl/Stolzl-Bold.woff2’) format(‘woff2’),
+        url(‘/font/Stolzl/Stolzl-Bold.ttf’) format(‘truetype’)
+}
+
 body {
     cursor: var(--Pointer), auto;
+    font-family: 'Stolzl', Arial, Helvetica, sans-serif;
+    font-weight: 500;
+}
+
+h1 {
+    font-family: 'Barracuda', Arial, Helvetica, sans-serif;
 }
 
 a {
