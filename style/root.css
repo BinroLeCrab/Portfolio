@@ -21,6 +21,9 @@
     /* Radius  */
     --Rad-int: 10px;
     --Rad-ext: 20px;
+
+    /* Font */
+    --Barracuda: 'Barracuda', Arial, Helvetica, sans-serif;
 }
 
 /* Font */
@@ -59,9 +62,11 @@
 }
 
 body {
+    margin: 0px;
     cursor: var(--Pointer), auto;
     font-family: 'Stolzl', Arial, Helvetica, sans-serif;
     font-weight: 500;
+    background-color: var(--White);
 }
 
 h1 {
