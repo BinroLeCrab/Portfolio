@@ -63,6 +63,7 @@
 
 body {
     margin: 0px;
+    padding: 0px;
     cursor: var(--Pointer), auto;
     font-family: 'Stolzl', Arial, Helvetica, sans-serif;
     font-weight: 500;

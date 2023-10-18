@@ -1,0 +1,22 @@
+/* Hero */
+
+.heroban{
+    height: 100vh;
+    background-color: blue; 
+
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr fit-content(100%) 1fr;
+    align-items: center;
+}
+
+.herotxtillu {
+    text-align: center;
+}
+
+#illu {
+    width: 80%;
+    height: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}

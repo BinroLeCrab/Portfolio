@@ -5,7 +5,7 @@ function run() {
     const svg = document.querySelector("svg");
     const body = document.querySelector("body");
     const yeux = document.querySelector("#svgYeux");
-    const walk = 100;
+    const walk = 200;
 
     function regard(e) {
         console.log("a");
