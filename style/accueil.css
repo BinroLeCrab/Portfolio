@@ -4,6 +4,7 @@ body {
     background-image: url(../img/asset/paper.jpg);
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
 }
 
 /* Hero */
@@ -34,7 +35,7 @@ body {
     margin: -8px 0px;
     font-size: 1.8rem;
     font-family: var(--Stolzl);
-    color: var(--White);
+    color: var(--Grey);
 }
 
 .heroarrow {
