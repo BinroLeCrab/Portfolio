@@ -17,6 +17,7 @@
     --Black: #1e1e1e;
     --White: #f6f6f6;
     --Blue : #264de4;
+    --Grey : ;
 
     /* Radius  */
     --Rad-int: 10px;
@@ -24,6 +25,7 @@
 
     /* Font */
     --Barracuda: 'Barracuda', Arial, Helvetica, sans-serif;
+    --Stolzl: 'Stolzl', Arial, Helvetica, sans-serif;
 }
 
 /* Font */
@@ -65,13 +67,22 @@ body {
     margin: 0px;
     padding: 0px;
     cursor: var(--Pointer), auto;
-    font-family: 'Stolzl', Arial, Helvetica, sans-serif;
+    font-family: var(--Stolzl);
     font-weight: 500;
     background-color: var(--White);
 }
 
+footer {
+    background-color: var(--White);
+}
+
 h1 {
-    font-family: 'Barracuda', Arial, Helvetica, sans-serif;
+    font-family: var(--Barracuda);
+}
+
+h2 {
+    font-family: var(--Barracuda);
+    color: var(--Blue);
 }
 
 a {

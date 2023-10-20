@@ -1,8 +1,15 @@
+/* Body */
+
+body {
+    background-image: url(../img/asset/paper.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
 /* Hero */
 
 .heroban{
     height: 100vh;
-    background-color: blue; 
 
     display: grid;
     grid-template-rows: 1fr;
@@ -10,13 +17,50 @@
     align-items: center;
 }
 
-.herotxtillu {
+.herotxt {
+    color: var(--White);
+    
+    display: flex;
+    justify-content: center;
+}
+
+.herotxt > div > h1 {
+    font-weight: 700;
+    font-size: 5rem;
+    margin: 0px;
+}
+
+.herotxt > div > h2 {
+    margin: -8px 0px;
+    font-size: 1.8rem;
+    font-family: var(--Stolzl);
+    color: var(--White);
+}
+
+.heroarrow {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 90%;
+}
+
+.heroarrow > img {
+    width: 40px;
+}
+
+.heroillu {
     text-align: center;
 }
 
 #illu {
-    width: 80%;
-    height: 80%;
+    width: 90%;
+    height: 90%;
     margin-left: auto;
     margin-right: auto;
+}
+
+/* Main */
+
+#main {
+    background-color: var(--White);
 }

@@ -12,11 +12,16 @@
     gap: 10px;
     grid-template-areas: "Logo . Ac Proj Prop Cont";
 
-    background-color: var(--Black);
     font-family: var(--Barracuda);
     font-size: 1.2rem;
     font-weight: 700;
     border-radius: var(--Rad-ext);    
+
+    transition: 0.3s;
+}
+
+.change_BG_color {
+    background-color: var(--Black);
 }
 
 .NavLink {

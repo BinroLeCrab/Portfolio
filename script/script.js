@@ -32,4 +32,17 @@ function run() {
     } 
 
     body.addEventListener('mousemove', regard);
+
+    window.addEventListener("scroll", change_BG_color);
+
+    function change_BG_color() {
+        var Head = document.getElementById("header");
+        // We add pageYOffset for compatibility with IE.
+        if (window.scrollY >= 60) {
+            Head.className = "change_BG_color";
+        } else {
+            Head.className = "";
+        }
+    };
 }
+
