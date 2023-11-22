@@ -76,6 +76,43 @@
     color: var(--White);
 }
 
+.tagDiv {
+    display: flex;
+    gap: 5px;
+    height: fit-content;
+}
+
+.tag {
+    padding: 5px 10px;
+    border-radius: var(--Rad-ext);
+    background-color: #254be4e6;
+    font-size: 0.875rem;
+    width: fit-content;
+    font-weight: 400;
+}
+
+.voirProj {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    height: fit-content;
+    width: fit-content;
+    padding: 5px 15px;
+    background-color: var(--White);
+    border-radius: var(--Rad-ext);
+    color: var(--Black);
+}
+
+.voirProj > .arrowR {
+    height: 30px;
+    width: 30px;
+    border-radius: var(--Rad-ext);
+}
+
+.outil {
+    height: 40px;
+    width: 40px;
+}
 
 
 

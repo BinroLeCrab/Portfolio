@@ -22,6 +22,7 @@
     /* Radius  */
     --Rad-int: 10px;
     --Rad-ext: 20px;
+    --Rad-main: 30px 30px 0px 0px;
 
     /* Font */
     --Barracuda: 'Barracuda', Arial, Helvetica, sans-serif;
@@ -63,6 +64,10 @@
         url(‘/font/Stolzl/Stolzl-Bold.ttf’) format(‘truetype’)
 }
 
+html {
+    background-color: var(--Black);
+}
+
 body {
     margin: 0px;
     padding: 0px;
@@ -72,22 +77,47 @@ body {
     background-color: var(--White);
 }
 
+body::-webkit-scrollbar {
+    width: 5px;
+    height: 10px;
+    background-color: var(--Black);
+}
+
+  
+body::-webkit-scrollbar-thumb {
+    background: var(--Blue);
+    border-radius: 5px;
+}
+
 footer {
     background-color: var(--White);
 }
 
 h1 {
     font-family: var(--Barracuda);
+    font-weight: 700;
+    font-size: 5rem;
+    margin: 0px;
 }
 
 h2 {
     font-family: var(--Barracuda);
     color: var(--Blue);
+    font-size: 2.188rem;
+    text-transform: capitalize;
+}
+
+h4 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: capitalize;
 }
 
 a {
     cursor: var(--Hand), auto;
 }
+
+
 
 /*   _____     _____
     |  _  |   |  _  |

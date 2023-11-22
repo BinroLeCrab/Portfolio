@@ -25,12 +25,6 @@ body {
     justify-content: center;
 }
 
-.herotxt > div > h1 {
-    font-weight: 700;
-    font-size: 5rem;
-    margin: 0px;
-}
-
 .herotxt > div > h2 {
     margin: -8px 0px;
     font-size: 1.8rem;
@@ -64,4 +58,56 @@ body {
 
 #main {
     background-color: var(--White);
+    text-align: center;
+    padding: 30px;
+    border-radius: var(--Rad-main);
+}
+
+/* Derniers Projets */
+
+.CardsProj {
+    display: grid;
+    gap: 10px;
+    width: 400px;
+    padding: 20px;
+    border-radius: var(--Rad-ext);
+    background-color: var(--Black);
+    text-decoration: none;
+    text-align: left;
+    color: var(--White);
+}
+
+.CardsProj * {
+    margin: 0px;
+}
+
+.cover {
+    width: auto;
+    height: 250px;
+    border-radius: var(--Rad-int);
+    background-image: url(../img/projet/IME/IME_01.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.titleCards {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.date {
+    font-weight: 500;
+    font-size: 0.875rem;
+    color: var(--Grey);
+}
+
+.basCards {
+    display: flex;
+    justify-content: space-between;
+}
+
+.outilCards {
+    display: flex;
+    gap: 5px;
 }
