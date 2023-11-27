@@ -76,6 +76,27 @@
     color: var(--White);
 }
 
+#OverCircle {
+    position: fixed;
+    right: 2vw;
+    bottom: 2vw;
+
+    background: var(--Blue);
+    border-radius: 500px;
+    height: 100px;
+    width: 100px;
+
+    z-index: 100;
+}
+
+#Binocle {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-7deg);
+    height: 80px;
+}
+
 .tagDiv {
     display: flex;
     gap: 5px;
