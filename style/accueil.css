@@ -57,7 +57,7 @@ body {
 /* Main */
 
 #main {
-    background-color: var(--White);
+    background-color: var(--Grey);
     text-align: center;
     padding: 30px;
     border-radius: var(--Rad-main);

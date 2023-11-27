@@ -114,7 +114,56 @@
     width: 40px;
 }
 
+/* Footer */
 
+footer {
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    grid-template-rows: min-content min-content 20px min-content;
+    grid-template-areas: 
+        "NL M"
+        "P ."
+        ". ."
+        "FI RF";
+    align-items: center;
+
+    padding: 40px 100px 50px;
+    background-color: var(--White);
+}
+
+footer > p {
+    margin: 5px 0px;
+}
+
+#NameLink {
+    grid-area: NL;
+}
+
+#Email {
+    grid-area: M;
+}
+
+#Print {
+    grid-area: P;
+}
+
+#FootInfo {
+    grid-area: FI;
+}
+
+#ResFoot {
+    grid-area: RF;
+
+    display: grid;
+    grid-template-columns: repeat(6, min-content);
+    gap: 5px;
+    justify-content: end;
+}
+
+.FootIcon {
+    height: 25px;
+    width: 25px;
+}
 
 
 

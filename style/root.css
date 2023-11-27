@@ -117,6 +117,18 @@ a {
     cursor: var(--Hand), auto;
 }
 
+.noDeco {
+    text-decoration: none;
+    color: var(--Black);
+}
+
+.blue {
+    color: var(--Blue);
+}
+
+.bloc {
+    display: block;
+}
 
 
 /*   _____     _____
