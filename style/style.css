@@ -78,8 +78,8 @@
 
 #OverCircle {
     position: fixed;
-    right: 2vw;
-    bottom: 2vw;
+    right: 1vw;
+    bottom: 1vw;
 
     background: var(--Blue);
     border-radius: 500px;
@@ -98,12 +98,21 @@
     opacity: 0;
 }
 
-#Binocle {
+#CircleTxt {
     position: relative;
+    height: 95%;
+    width: 95%;
+    transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
+}
+
+#Binocle {
+    position: relative;
+    top: -50%;
+    left: 50%;
     transform: translate(-50%, -50%) rotate(-7deg);
-    height: 80px;
+    height: 75%;
 }
 
 .tagDiv {
