@@ -36,13 +36,21 @@ function run() {
     window.addEventListener("scroll", change_BG_color);
 
     function change_BG_color() {
-        var Head = document.getElementById("header");
-        // We add pageYOffset for compatibility with IE.
+        const Head = document.querySelector("#header");
+        const CirBin = document.querySelector("#OverCircle");
+
         if (window.scrollY >= 60) {
-            Head.className = "change_BG_color";
+            Head.classList.add("change_BG_color");
+
+            CirBin.classList.remove("OverOFF");
+            CirBin.classList.add("OverON");
         } else {
-            Head.className = "";
+            Head.classList.remove("change_BG_color");
+
+            CirBin.classList.remove("OverON");
+            CirBin.classList.add("OverOFF");
         }
+
     };
 }
 

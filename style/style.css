@@ -87,6 +87,15 @@
     width: 100px;
 
     z-index: 100;
+    transition: 0.3s;
+}
+
+.OverON {
+    opacity: 1;
+}
+
+.OverOFF {
+    opacity: 0;
 }
 
 #Binocle {
