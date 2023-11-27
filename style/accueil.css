@@ -111,3 +111,54 @@ body {
     display: flex;
     gap: 5px;
 }
+
+/* Info */
+
+.infoCards {
+    display: grid;
+    grid-template-columns: 5fr 20px 6fr;
+    grid-template-rows: 1fr min-content min-content min-content 1fr;
+    grid-template-areas: 
+        "i . ."
+        "i . pO"
+        "i . pT"
+        "i . pTh"
+        "i . .";
+
+    height: 380px;
+    width: 75vw;
+    padding: 20px;
+    border-radius: var(--Rad-ext);
+
+    background-color: var(--Black);
+
+    color: var(--White);
+    text-align: left;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ImgInfo {
+    grid-area: i;
+
+    height: 340px;
+
+    background-image: url(../img/asset/Moi.jpg);
+    background-size: cover;
+    background-position: center;
+
+    border-radius: var(--Rad-int);
+}
+
+#pIO {
+    grid-area: pO;
+}
+
+#pIT {
+    grid-area: pT;
+}
+
+#pITh {
+    grid-area: pTh;
+}

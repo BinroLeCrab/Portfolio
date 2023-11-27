@@ -31,7 +31,7 @@ function run() {
 
     } 
 
-    body.addEventListener('mousemove', regard);
+    // body.addEventListener('mousemove', regard);
 
     window.addEventListener("scroll", change_BG_color);
 
