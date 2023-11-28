@@ -8,14 +8,14 @@ function run() {
     // const walk = 200;
 
     // function regard(e) {
-    //     console.log("a");
+    //     // console.log("a");
 
     //     const { offsetWidth: width, offsetHeight: height } = body;
     //     let { offsetX: x, offsetY: y } = e;
 
-    //     console.log(width, height)
+    //     // console.log(width, height)
 
-    //     console.log(x,y)
+    //     // console.log(x,y)
 
     //     if (this !== e.target) {
     //         x = x + e.target.offsetLeft;
@@ -31,13 +31,13 @@ function run() {
 
     // } 
 
-    // body.addEventListener('mousemove', regard);
+    // window.addEventListener('mousemove', regard);
 
     window.addEventListener("scroll", change_BG_color);
 
     function change_BG_color() {
         const Head = document.querySelector("#header");
-        const CirBin = document.querySelector("#OverCircle");
+        const CirBin = document.querySelector("#Over");
 
         if (window.scrollY >= 60) {
             Head.classList.add("change_BG_color");
@@ -52,5 +52,35 @@ function run() {
         }
 
     };
+
+    const OverBtn = document.querySelector("#OverCircle");
+    let clic = 0;
+
+    OverBtn.addEventListener("click", ClickRes);
+
+    document.querySelector("main").addEventListener("click", () => {
+
+        if (clic ==1) {
+            ClickRes();
+        }
+
+    });
+
+    function ClickRes(){
+        const Res = document.querySelector("#ResOver");
+
+        if(clic == 0) {
+            Res.classList.remove("ResNoClick");
+            Res.classList.add("ResClick");
+            
+            clic = 1;
+        } else {
+            Res.classList.remove("ResClick");
+            Res.classList.add("ResNoClick");
+
+            clic = 0;
+        }
+
+    }
 }
 
