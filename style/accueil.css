@@ -61,6 +61,7 @@ body {
     text-align: center;
     padding: 30px;
     border-radius: var(--Rad-main);
+    overflow: hidden;
 }
 
 /* Derniers Projets */
@@ -161,4 +162,56 @@ body {
 
 #pITh {
     grid-area: pTh;
+}
+
+/* Compétences */
+
+.Bendeau {
+    height: 100px;
+    width: 110vw;
+    margin-left: -5vw;
+    margin-right: -5vw;
+    padding: 10px 0px;
+}
+
+.BckBlue {
+    background-color: var(--Blue);
+    color: var(--White);
+}
+
+.BckBlack {
+    background-color: var(--Black);
+    color: var(--White);
+}
+
+.BckGrey {
+    background-color: var(--Grey);
+    color: var(--Black);
+}
+
+.BckWhite {
+    background-color: var(--White);
+    color: var(--Black);
+}
+
+.BendeauCont {
+    height: 80px;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.BendeauCont > span {
+    width: max-content;
+    text-transform: uppercase;
+    font-family: var(--Barracuda);
+    font-weight: 500;
+    font-size: xxx-large;
+    font-stretch: condensed;
+    height: 39px;
+}
+
+.BendeauIcon {
+    height: 70px;
 }
