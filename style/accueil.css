@@ -172,11 +172,13 @@ body {
 }
 
 .Bendeau {
+    position: relative;
     height: 100px;
     width: 110vw;
     margin-left: -5vw;
     margin-right: -5vw;
     padding: 10px 0px;
+    z-index: 10;
 }
 
 .BckBlue {

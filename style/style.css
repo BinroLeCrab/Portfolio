@@ -1,3 +1,29 @@
+/* Transition */
+
+#transition {
+    width: 100vw;
+    position: fixed;
+    z-index: 1000;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition : ease-in 0.4s;
+
+    pointer-events: none;
+}
+
+.coucou {
+    height: 0vh;
+}
+
+.bye {
+    bottom: 0vh;
+    height: 100vh;
+}
+
+/* header */
+
 #header {
     position: fixed;
     top: 1vh;
@@ -18,6 +44,8 @@
     border-radius: var(--Rad-ext);    
 
     transition: 0.3s;
+
+    z-index: 100;
 }
 
 .change_BG_color {
@@ -86,6 +114,8 @@
     width: 100px;
     
     transition: 0.3s;
+
+    z-index: 100;
 }
 
 #OverCircle {
