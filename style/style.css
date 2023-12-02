@@ -157,6 +157,8 @@
 #ResOver {
     position: relative;
     z-index: 99;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     
     overflow: hidden;
@@ -170,6 +172,8 @@
 }
 
 .ResClick {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     bottom: 276%;
 }
@@ -182,6 +186,8 @@
 .tagDiv {
     display: flex;
     gap: 5px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
 }
 
@@ -190,6 +196,8 @@
     border-radius: var(--Rad-ext);
     background-color: #254be4e6;
     font-size: 0.875rem;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     font-weight: 400;
 }
@@ -198,7 +206,11 @@
     display: flex;
     gap: 5px;
     align-items: center;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     padding: 5px 15px;
     background-color: var(--White);
@@ -221,7 +233,9 @@
 
 footer {
     display: grid;
+    grid-template-columns: 1fr -webkit-min-content;
     grid-template-columns: 1fr min-content;
+    grid-template-rows: -webkit-min-content -webkit-min-content 20px -webkit-min-content;
     grid-template-rows: min-content min-content 20px min-content;
     grid-template-areas: 
         "NL M"
@@ -258,6 +272,7 @@ footer > p {
     grid-area: RF;
 
     display: grid;
+    grid-template-columns: repeat(6, -webkit-min-content);
     grid-template-columns: repeat(6, min-content);
     gap: 5px;
     justify-content: end;
