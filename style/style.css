@@ -9,6 +9,7 @@
     justify-content: center;
     align-items: center;
     transition : ease-in 0.4s;
+    overflow: hidden;
 
     pointer-events: none;
 }
@@ -26,7 +27,6 @@
 
 #header {
     position: fixed;
-    top: 1vh;
     left: 1vh;
     right: 1vh;
 
@@ -46,6 +46,10 @@
     transition: 0.3s;
 
     z-index: 100;
+}
+
+.headTop {
+    top: 1vh;
 }
 
 .change_BG_color {

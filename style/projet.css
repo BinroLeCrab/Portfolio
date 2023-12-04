@@ -1,0 +1,56 @@
+main {
+    background-color: var(--Grey);
+    padding: 2vh;
+}
+
+.opaZ {
+    top: -10vh;
+}
+
+.change_BG_color {
+    top: 1vh;
+}
+
+.hero {
+    height: 98vh;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 1fr min-content;
+    grid-template-columns: 1fr max-content;
+    grid-template-areas: 
+        "i i"
+        "t d";
+    gap: 2vh;
+}
+
+.illuCouv {
+    background-image: url(../img/projet/IME/IME_01.png);
+    background-position: center;
+    background-size: cover;
+    border-radius: 30px;
+
+    grid-area: i;
+
+    padding: 20px;
+}
+
+.Back {
+    padding: 10px 15px;
+    background-color: var(--White);
+    display: block;
+    width: fit-content;
+    border-radius: var(--Rad-ext);
+    text-decoration: none;
+    color: var(--Black);
+}
+
+.titleProj {
+    color: var(--Blue);
+
+    grid-area: t;
+}
+
+.date {
+    grid-area: d;
+    align-self: center;
+}
