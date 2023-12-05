@@ -4,7 +4,6 @@ const transition = document.querySelector("#transition");
 
 setTimeout(function(){
 
-    console.log(transition);
     let trans = document.querySelector("#transition");
     trans.classList.remove("bye");
     trans.classList.add("coucou");
@@ -14,7 +13,7 @@ setTimeout(function(){
 function run() {
     
     // const svg = document.querySelector("svg");
-    // const body = document.querySelector("body");
+    const body = document.querySelector("body");
     // const yeux = document.querySelector("#svgYeux");
     // const walk = 200;
 
@@ -121,5 +120,17 @@ function run() {
 
         })
     }
+
+    let helicoO = document.querySelector("#helicoO");
+    let helicoT = document.querySelector("#helicoT");
+    let DegO = 0;
+    let DegT = 180;
+
+    body.addEventListener("wheel", () => {
+        DegO = DegO + 50;
+        DegT = DegT + 50;
+        helicoO.style.transform = `rotateY(${DegO}deg)`;
+        helicoT.style.transform = `rotateY(${DegT}deg)`;
+    });
 }
 

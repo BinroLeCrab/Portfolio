@@ -1,10 +1,11 @@
 main {
     background-color: var(--Grey);
     padding: 2vh;
+    height: 1500px;
 }
 
 .opaZ {
-    top: -10vh;
+    top: -100vh;
 }
 
 .change_BG_color {
@@ -46,11 +47,37 @@ main {
 
 .titleProj {
     color: var(--Blue);
+    margin-left: 2vh;
 
     grid-area: t;
 }
 
 .date {
+    margin-right: 4vh;
+
     grid-area: d;
     align-self: center;
+}
+
+
+#helicoO {
+    width: 30px;
+    height: 30px;
+    background-color: blue;
+
+    transition: 0.3s;
+    transform: rotateY(0deg);
+    backface-visibility: hidden;
+}
+
+#helicoT {
+    position: relative;
+    top: -30px;
+    width: 30px;
+    height: 30px;
+    background-color: red;
+
+    transition: 0.3s;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
 }
