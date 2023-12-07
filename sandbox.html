@@ -195,32 +195,38 @@
 			<section id="main">
 				<article id="liste">
 					<h2>Mes derniers projets</h2>
-					<div class="grilleListe">
-						<a href="index.php?id_projet=IME" class="CardsProj">
-							<div class="cover"></div>
-							<div class="tagDiv">
-								<p class="tag">Dev Front</p>
-								<p class="tag">Dev Back</p>
-								<p class="tag">Base de données</p>
+					<div class="carou">
+						<div id="left" class="nav"></div>
+						<div class="container">
+							<div class="slider">
+								<a href="index.php?id_projet=IME" class="CardsProj">
+									<div class="cover"></div>
+									<div class="tagDiv">
+										<p class="tag">Dev Front</p>
+										<p class="tag">Dev Back</p>
+										<p class="tag">Base de données</p>
+									</div>
+									<div class="titleCards">
+										<h4 class="tCards">Site In My Ears</h4>
+										<p class="date">Juin 2023</p>
+									</div>
+									<p class="picth">Site web de recommandations musicales réalisé grâce à des fichiers PHP et une base de données SQL.</p>
+									<div class="basCards">
+										<div class="outilCards">
+											<img class="outil" src="img/outils/html.svg" alt="html"/>
+											<img class="outil" src="img/outils/css.svg" alt="css"/>
+											<img class="outil" src="img/outils/php.svg" alt="php"/>
+										</div>
+										<div class="voirProj">
+											<p>Voir le projet</p>
+											<img class="arrowR" src="img/asset/arrowN.svg" alt=""/>
+										</div>
+									</div>
+								</a>
+								<a href="index.php?id_projet=AfB" class="CardsProj">Affiches Bauhaus</a>
 							</div>
-							<div class="titleCards">
-								<h4 class="tCards">Site In My Ears</h4>
-								<p class="date">Juin 2023</p>
-							</div>
-							<p class="picth">Site web de recommandations musicales réalisé grâce à des fichiers PHP et une base de données SQL.</p>
-							<div class="basCards">
-								<div class="outilCards">
-									<img class="outil" src="img/outils/html.svg" alt="html"/>
-									<img class="outil" src="img/outils/css.svg" alt="css"/>
-									<img class="outil" src="img/outils/php.svg" alt="php"/>
-								</div>
-								<div class="voirProj">
-									<p>Voir le projet</p>
-									<img class="arrowR" src="img/asset/arrowN.svg" alt=""/>
-								</div>
-							</div>
-						</a>
-						<a href="index.php?id_projet=AfB" class="liendivgroupe">Affiches Bauhaus</a>
+						</div>
+						<div id="right" class="nav"></div>
 					</div>
 					<a href="projet.php" class ="Btn">Voir plus de projets</a>
 				</article>
@@ -306,6 +312,8 @@
 			</div>
 			<!-- <p><a href="https://bento.me/robinv">VIGIER Robin</a>, 2023. Illustrations&#x202F;: tous droits r&#xE9;serv&#xE9;s. <a href="index.php?MENTION">Mentions l&#xE9;gales</a>. -->
 		</footer>
+
+		<script type="text/javascript" src="script/slider.js"></script>
 	</body>
 </html>
 <!--		_____     _____ 			-->

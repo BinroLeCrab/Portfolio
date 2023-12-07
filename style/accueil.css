@@ -65,10 +65,75 @@ body {
 
 /* Derniers Projets */
 
+#liste {
+    margin-left: -30px;
+    margin-right: -30px;
+    overflow: hidden;
+}
+
+
+/* Carrousel */
+
+.carou {
+
+    --WidthCards : 400px;
+
+    position: relative;
+    /* background-color: blue; */
+    width: 100%;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 1fr var(--WidthCards) 1fr;
+    justify-content: space-between;
+    grid-template-areas: "l c r";
+
+}
+
+.nav {
+    position: relative;
+    z-index: 2;
+    /* background-color: rgba(0, 0, 0, 0.478); */
+    width: 100%;
+}
+
+
+#left {
+    grid-area: l;
+}
+
+#right {
+    grid-area: r;
+}
+
+.container {
+    position: relative;
+    /* background-color: green; */
+    grid-area: c;
+    overflow: visible;
+    z-index: 1;
+}
+
+.slider {
+    position: relative;
+    /* background-color: rgba(255, 0, 0, 0.33); */
+    height: 100%;
+    width: fit-content;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 40px;
+    /* padding: 0px 135px; */
+    top: 0px;
+    left: 0px;
+
+    transition: 0.3s;
+}
+
 .CardsProj {
+    position: relative;
     display: grid;
     gap: 10px;
-    width: 400px;
+    width: var(--WidthCards);
     padding: 20px;
     border-radius: var(--Rad-ext);
     background-color: var(--Black);
