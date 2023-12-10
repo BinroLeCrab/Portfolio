@@ -20,7 +20,7 @@ main {
     grid-template-columns: 1fr max-content;
     grid-template-areas: 
         "i i"
-        "t d";
+        "h g";
     gap: 2vh;
 }
 
@@ -45,20 +45,40 @@ main {
     color: var(--Black);
 }
 
+.headHero {
+    grid-area: h;
+    margin-left: 2vh;
+}
+
 .titleProj {
     color: var(--Blue);
-    margin-left: 2vh;
-
-    grid-area: t;
 }
 
 .date {
-    margin-right: 4vh;
-
-    grid-area: d;
+    margin: 0vh 0vh 2vh;
     align-self: center;
 }
 
+.GridHeroRight {
+    grid-area: g;
+
+    display: grid;
+    grid-template-rows: min-content min-content;
+    gap: 20px;
+    margin-right: 2vh;
+}
+
+
+
+.outilDiv {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.outilDiv p {
+    margin: 0px;
+}
 
 #helicoO {
     width: 30px;

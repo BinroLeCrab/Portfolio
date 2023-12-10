@@ -147,10 +147,13 @@ body {
 }
 
 .cover {
+
+    --urlCover : url(../img/projet/IME/IME_01.png);
+
     width: auto;
     height: 250px;
     border-radius: var(--Rad-int);
-    background-image: url(../img/projet/IME/IME_01.png);
+    background-image: var(--urlCover);
     background-position: center;
     background-size: cover;
 }

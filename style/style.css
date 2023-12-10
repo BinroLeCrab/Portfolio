@@ -197,6 +197,7 @@
 
 .tag {
     padding: 5px 10px;
+    margin: 0px;
     border-radius: var(--Rad-ext);
     background-color: #254be4e6;
     font-size: 0.875rem;
@@ -204,6 +205,7 @@
     width: -moz-fit-content;
     width: fit-content;
     font-weight: 400;
+    color: var(--White);
 }
 
 .voirProj {
