@@ -77,16 +77,21 @@ body {
     background-color: var(--White);
 }
 
-body::-webkit-scrollbar {
+::-webkit-scrollbar {
     width: 5px;
     height: 10px;
     background-color: var(--Black);
 }
 
   
-body::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
     background: var(--Blue);
     border-radius: 5px;
+}
+
+::selection {
+    background-color: var(--Blue);
+    color: var(--White);
 }
 
 footer {

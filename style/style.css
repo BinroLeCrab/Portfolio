@@ -198,6 +198,7 @@
 .tag {
 
     --Bck : #254be4e6;
+    --Txt : var(--White);
 
     padding: 5px 10px;
     margin: 0px;
@@ -207,8 +208,8 @@
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
-    font-weight: 400;
-    color: var(--White);
+    font-weight: 500;
+    color: var(--Txt);
 }
 
 .voirProj {
@@ -236,6 +237,33 @@
 .outil {
     height: 40px;
     width: 40px;
+}
+
+/* Bouton */
+
+.Btn {
+    background-color: var(--Blue);
+    color: var(--White);
+    padding: 16px 24px;
+    font-size: 1.25rem;
+    height: fit-content;
+    width: fit-content;
+    border-radius: var(--Rad-int);
+    transition: 0.3s;
+}
+
+.Btn:hover {
+    background-color: var(--Black);
+    transform: scale(1.1);
+}
+
+/* Figure */
+
+figure {
+    margin: 0px;
+    height: fit-content;
+    width: fit-content;
+    text-align: center;
 }
 
 /* Footer */

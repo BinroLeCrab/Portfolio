@@ -48,7 +48,7 @@ function ToTheRight() {
     }
 }
 
-setInterval(ToTheLeft, 10000);
+setInterval(ToTheRight, 10000);
 
 /*   _____     _____
     |  _  |   |  _  |

@@ -1,7 +1,7 @@
 main {
     background-color: var(--Grey);
-    padding: 2vh;
-    height: 1500px;
+    padding: 2vh 2vw 0vh;
+    overflow: hidden;
 }
 
 .opaZ {
@@ -24,6 +24,7 @@ main {
         "i i"
         "h g";
     gap: 2vh;
+    margin-bottom: 50px;
 }
 
 .illuCouv {
@@ -89,16 +90,111 @@ main {
 /* Info sur le projet */
 
 .InfoProj {
-    border: solid 1px red;
+    /* border: solid 1px red; */
     padding: 0vh 4vw;
 }
 
-.InfoProj * {
+/* .InfoProj * {
     border: solid 1px blue;
-}
+} */
 
 .InfoProj p {
     max-width: 50vw;
+}
+
+article {
+    margin: 30px 0px;
+}
+
+.ArticleTop {
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    grid-template-rows: repeat(2, min-content);
+    grid-template-areas: 
+        "d i"
+        "a i";
+    gap: 0px 40px;
+}
+
+.ArticleTop > div {
+    grid-area: d;
+
+    padding: 20px 0px 0px;
+    /* background-color: green; */
+}
+
+.ArticleTop > div > p {
+    margin-top: 0px;
+}
+
+.ArticleTop > a {
+    grid-area: a;
+
+    /* background-color: red; */
+}
+
+.ArticleTop > .Apercu {
+    grid-area: i;
+
+    max-width: 45vw;
+    /* background-color: yellow; */
+}
+
+.Visuel {
+    display: grid;
+    grid-template-rows: repeat(2, min-content);
+    grid-template-areas: 
+        "t"
+        "f";
+}
+
+.Visuel h2 {
+    grid-area: t;
+}
+
+.Visuel .visuels {
+    grid-area: f;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.Apercu {
+    width: 100%;
+    max-width: 50vw;
+    border-radius: var(--Rad-ext);
+}
+
+.Equipe {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    height: fit-content;
+    width: 100vw;
+    height: 86px;
+    margin-bottom: 0px;
+    margin-left: -6vw;
+    padding: 9px 10px 9px;
+    background-color: var(--Blue);
+}
+
+.Equipe p {
+    text-transform: uppercase;
+    font-family: var(--Barracuda);
+    font-weight: 500;
+    font-size: 3.25rem;
+    color: var(--White);
+    margin: 11px 0px 0px;
+}
+
+.Copains {
+    height: 100%;
+    border-radius: 100%;
+}
+
+.Solo {
+    background-color: var(--Black);
 }
 
 
