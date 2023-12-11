@@ -164,6 +164,8 @@ body {
 }
 
 .CardsProj {
+    --urlCover : url(../img/projet/IME/IME_01.png);
+
     position: relative;
     display: grid;
     gap: 10px;
@@ -181,9 +183,6 @@ body {
 }
 
 .cover {
-
-    --urlCover : url(../img/projet/IME/IME_01.png);
-
     width: auto;
     height: 250px;
     border-radius: var(--Rad-int);

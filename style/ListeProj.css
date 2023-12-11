@@ -1,0 +1,82 @@
+main {
+    background: var(--Grey);
+    height: 100vh;
+    display: grid;
+    align-items: end;
+    overflow: hidden;
+}
+
+#header {
+    background-color: var(--Black);
+}
+
+/* Liste Projet */
+
+.Liste {
+    display: flex;
+    gap: 20px;
+    height: fit-content;
+    transform: translate(0, 80%);
+    padding: 20px;
+}
+
+/* Cards Projet */
+
+.CardsProj {
+    --urlCover : url(../img/projet/IME/IME_01.png);
+
+    position: relative;
+    display: grid;
+    gap: 10px;
+    width: 400px;
+    padding: 20px;
+    border-radius: var(--Rad-ext);
+    background-color: var(--Black);
+    text-decoration: none;
+    text-align: left;
+    color: var(--White);
+    transition: 0.3s;
+}
+
+.ActiveCards {
+    transform: translate(0, calc(-80% - 30px)) ;
+}
+
+.NoActive:hover {
+    transform: translate(0, -55%);
+}
+
+.CardsProj * {
+    margin: 0px;
+}
+
+.cover {
+    width: auto;
+    height: 250px;
+    border-radius: var(--Rad-int);
+    background: var(--urlCover);
+    background-position: center;
+    background-size: cover;
+}
+
+.titleCards {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.date {
+    font-weight: 500;
+    font-size: 0.875rem;
+    color: var(--Grey);
+}
+
+.basCards {
+    display: flex;
+    justify-content: space-between;
+}
+
+.outilCards {
+    display: flex;
+    gap: 5px;
+}

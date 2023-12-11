@@ -12,7 +12,7 @@ setTimeout(function(){
 const liens = document.querySelectorAll('.Animtrans');
 
 for(i=0; i< liens.length; i++){
-    let lien = liens[i]
+    let lien = liens[i];
 
     // on écoute le clic sur ces liens
     lien.addEventListener('click' , function(event){
@@ -35,3 +35,9 @@ for(i=0; i< liens.length; i++){
 
     })
 }
+
+/*   _____     _____
+    |  _  |   |  _  |
+   -| | | |---| | | |-
+    |_____| 7 |_____|  ~B!nro~
+*/
