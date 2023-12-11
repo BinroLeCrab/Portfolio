@@ -196,10 +196,13 @@
 }
 
 .tag {
+
+    --Bck : #254be4e6;
+
     padding: 5px 10px;
     margin: 0px;
     border-radius: var(--Rad-ext);
-    background-color: #254be4e6;
+    background-color: var(--Bck);
     font-size: 0.875rem;
     width: -webkit-fit-content;
     width: -moz-fit-content;
