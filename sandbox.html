@@ -20,7 +20,7 @@
                 <img src="img/asset/Logo.svg" alt="Logo"/>
                 <p>Robin Vigier</p>
             </a>
-            <a href="sandboxProj.html" class="NavLink Animtrans" id="NavAc">Accueil</a>
+            <a href="sandbox.html" class="NavLink Animtrans" id="NavAc">Accueil</a>
             <a href="sandboxProj.html" class="NavLink Animtrans" id="NavProj">Projets</a>
             <a href="sandboxProj.html" class="NavLink Animtrans" id="NavProp">À Propos</a>
             <a href="sandboxProj.html" class="NavLink Animtrans" id="NavCont">Contact</a>
@@ -198,7 +198,20 @@
 				<article id="liste">
 					<h2>Mes derniers projets</h2>
 					<div class="carou">
-						<div id="left" class="nav"></div>
+						<div id="left" class="Slnav">
+							<!-- <img class="Slid" src="img/asset/SlidL.svg" alt=""/> -->
+							<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<g clip-path="url(#clip0_821_339)">
+									<rect class="BckSl" width="200" height="200" rx="100" transform="matrix(1 -8.74228e-08 -8.74228e-08 -1 0 200)" fill="#F6F6F6"/>
+									<path class="ArrSl" fill-rule="evenodd" clip-rule="evenodd" d="M124.226 144.226C127.48 140.972 127.48 135.695 124.226 132.441L90.1184 98.3337L124.226 64.2262C127.48 60.9718 127.48 55.6955 124.226 52.4411C120.972 49.1867 115.695 49.1867 112.441 52.4411L72.4408 92.4411C69.1864 95.6955 69.1864 100.972 72.4408 104.226L112.441 144.226C115.695 147.481 120.972 147.481 124.226 144.226Z" fill="#1E1E1E"/>
+								</g>
+								<defs>
+									<clipPath id="clip0_821_339">
+										<rect width="200" height="200" fill="white" transform="matrix(-1 0 0 1 200 0)"/>
+									</clipPath>
+								</defs>
+							</svg>
+						</div>
 						<div class="container">
 							<div class="slider">
 								<a href="index.php?id_projet=IME" class="CardsProj">
@@ -276,9 +289,22 @@
 								<a href="index.php?id_projet=AfB" class="CardsProj">Affiches Bauhaus</a>
 							</div>
 						</div>
-						<div id="right" class="nav"></div>
+						<div id="right" class="Slnav">
+							<!-- <img class="Slid" src="img/asset/SlidR.svg" alt=""/> -->
+							<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<g clip-path="url(#clip0_821_338)">
+									<rect class="BckSl" x="200" y="200" width="200" height="200" rx="100" transform="rotate(-180 200 200)" fill="#F6F6F6"/>
+									<path class="ArrSl" fill-rule="evenodd" clip-rule="evenodd" d="M75.7741 144.226C72.5197 140.972 72.5197 135.695 75.7741 132.441L109.882 98.3337L75.7741 64.2262C72.5197 60.9718 72.5197 55.6955 75.7741 52.4411C79.0285 49.1867 84.3049 49.1867 87.5592 52.4411L127.559 92.4411C130.814 95.6955 130.814 100.972 127.559 104.226L87.5592 144.226C84.3049 147.481 79.0285 147.481 75.7741 144.226Z" fill="#1E1E1E"/>
+								</g>
+								<defs>
+									<clipPath id="clip0_821_338">
+										<rect width="200" height="200" fill="white"/>
+									</clipPath>
+								</defs>
+							</svg>
+						</div>
 					</div>
-					<a href="projet.php" class ="Btn bloc noDeco">Voir plus de projets</a>
+					<a href="projet.php" class ="Btn bloc noDeco center">Voir plus de projets</a>
 				</article>
 				<article id="info">
 					<h2>Qui Je Suis ?</h2>
@@ -364,6 +390,7 @@
 		</footer>
 
 		<script type="text/javascript" src="script/slider.js"></script>
+		<script type="text/javascript" src="script/transition.js"></script>
 	</body>
 </html>
 <!--		_____     _____ 			-->

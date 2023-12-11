@@ -1,0 +1,11 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g clip-path="url(#clip0_821_339)">
+        <rect class="BckSl" width="200" height="200" rx="100" transform="matrix(1 -8.74228e-08 -8.74228e-08 -1 0 200)" fill="#F6F6F6"/>
+        <path class="ArrSl" fill-rule="evenodd" clip-rule="evenodd" d="M124.226 144.226C127.48 140.972 127.48 135.695 124.226 132.441L90.1184 98.3337L124.226 64.2262C127.48 60.9718 127.48 55.6955 124.226 52.4411C120.972 49.1867 115.695 49.1867 112.441 52.4411L72.4408 92.4411C69.1864 95.6955 69.1864 100.972 72.4408 104.226L112.441 144.226C115.695 147.481 120.972 147.481 124.226 144.226Z" fill="#1E1E1E"/>
+    </g>
+    <defs>
+        <clipPath id="clip0_821_339">
+            <rect width="200" height="200" fill="white" transform="matrix(-1 0 0 1 200 0)"/>
+        </clipPath>
+    </defs>
+</svg>

@@ -69,6 +69,7 @@ body {
     margin-left: -30px;
     margin-right: -30px;
     overflow: hidden;
+    padding-bottom: 10px;
 }
 
 
@@ -81,6 +82,8 @@ body {
     position: relative;
     /* background-color: blue; */
     width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     display: grid;
     grid-template-columns: 1fr var(--WidthCards) 1fr;
@@ -89,13 +92,42 @@ body {
 
 }
 
-.nav {
+.Slnav {
     position: relative;
     z-index: 2;
     /* background-color: rgba(0, 0, 0, 0.478); */
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: var(--Hand), auto;
 }
 
+.Slnav svg {
+    height: 70px;
+    width: 70px;
+    transition: 0.3s;
+}
+
+.Slnav svg:hover{
+    transform: scale(1.1);
+}
+
+.Slnav .BckSl {
+    transition: 0.3s;
+}
+
+.Slnav .ArrSl {
+    transition: 0.3s;
+}
+
+.Slnav:hover .BckSl {
+    fill: var(--Blue);
+}
+
+.Slnav:hover .ArrSl {
+    fill: var(--White);
+}
 
 #left {
     grid-area: l;
@@ -117,6 +149,8 @@ body {
     position: relative;
     /* background-color: rgba(255, 0, 0, 0.33); */
     height: 100%;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -321,3 +355,8 @@ transform: rotateZ(1deg);
 transform: rotateZ(54deg);
 transform: rotateZ(362deg);
 transform: rotateZ(361deg); */
+
+
+#BckSlR {
+    fill: blue;
+}

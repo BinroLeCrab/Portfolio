@@ -244,12 +244,21 @@
 .Btn {
     background-color: var(--Blue);
     color: var(--White);
-    padding: 16px 24px;
+    padding: 24px;
     font-size: 1.25rem;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     border-radius: var(--Rad-int);
     transition: 0.3s;
+    margin-top: 20px;
+}
+
+.BtnProj {
+    padding: 16px 24px ;
 }
 
 .Btn:hover {
@@ -261,7 +270,11 @@
 
 figure {
     margin: 0px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     text-align: center;
 }
