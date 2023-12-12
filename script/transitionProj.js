@@ -9,6 +9,10 @@ gsap.set(".illuCouv", {
     borderRadius: "0px"
 });
 
+gsap.set(".Back",{
+    marginTop: "-20%"
+});
+
 setTimeout(function(){
     const ap = gsap.timeline();
 
@@ -23,9 +27,16 @@ setTimeout(function(){
         duration: 0.3
     });
 
+    ap.to('.Back', {
+        marginTop: "0px",
+        duration: 0.3,
+        ease: "back.out"
+    });
+
+
     ap.set(".illuCouv", {
         height: 'auto'
-    })
+    });
 
 }, 1500)
 
