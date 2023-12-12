@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 :root {
 
     /* Cursor */
@@ -34,34 +38,42 @@
 @font-face {
 	font-family: 'Barracuda';
 	font-weight: 400;
-	src: url(‘/font/Barracuda/Barracuda-regular.ttf’) format(‘truetype’)
+    font-style: normal;
+	src: url('../font/Barracuda/Barracuda-regular.woff2') format('woff2'),
+        url('../font/Barracuda/Barracuda-regular.woff') format('woff');
 }
 
 @font-face {
 	font-family: 'Barracuda';
 	font-weight: 700;
-	src: url(‘/font/Barracuda/Barracuda-Bold.ttf’) format(‘truetype’)
+    font-style: normal;
+    src: url('../font/Barracuda/Barracuda-Bold.woff2') format('woff2'),
+        url('../font/Barracuda/Barracuda-Bold.woff') format('woff');
 }
 
 @font-face {
 	font-family: 'Stolzl';
 	font-weight: 400;
-	src: url(‘/font/Stolzl/Stolzl-Regular.woff2’) format(‘woff2’),
-        url(‘/font/Stolzl/Stolzl-Regular.ttf’) format(‘truetype’)
+    font-style: normal;
+    src: url('../font/Stolzl/Stolzl-Regular.woff2') format('woff2'),
+        url('../font/Stolzl/Stolzl-Regular.woff') format('woff');
 }
 
 @font-face {
 	font-family: 'Stolzl';
 	font-weight: 500;
-	src: url(‘/font/Stolzl/Stolzl-Medium.woff2’) format(‘woff2’),
-        url(‘/font/Stolzl/Stolzl-Medium.ttf’) format(‘truetype’)
+    font-style: normal;
+    src: url('../font/Stolzl/Stolzl-Medium.woff2') format('woff2'),
+        url('../font/Stolzl/Stolzl-Medium.woff') format('woff');
 }
 
 @font-face {
 	font-family: 'Stolzl';
 	font-weight: 700;
-	src: url(‘/font/Stolzl/Stolzl-Bold.woff2’) format(‘woff2’),
-        url(‘/font/Stolzl/Stolzl-Bold.ttf’) format(‘truetype’)
+    font-style: normal;
+    src: url('../font/Stolzl/Stolzl-Bold.woff2') format('woff2'),
+        url('../font/Stolzl/Stolzl-Bold.woff') format('woff');
+    
 }
 
 html {
@@ -83,7 +95,7 @@ body {
     background-color: var(--Black);
 }
 
-  
+
 ::-webkit-scrollbar-thumb {
     background: var(--Blue);
     border-radius: 5px;
