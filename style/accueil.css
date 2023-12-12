@@ -160,7 +160,7 @@ body {
     top: 0px;
     left: 0px;
 
-    transition: 0.3s;
+    transition: 0.5s;
 }
 
 .CardsProj {
@@ -176,6 +176,7 @@ body {
     text-decoration: none;
     text-align: left;
     color: var(--White);
+    transform-origin: 50% 0%;
 }
 
 .CardsProj * {
