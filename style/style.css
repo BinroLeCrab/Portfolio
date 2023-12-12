@@ -1,10 +1,11 @@
 /* Transition */
 
 #transition {
+
     width: 100vw;
     position: fixed;
     z-index: 1000;
-    background-color: var(--Blue);
+    background: var(--Blue);
     display: flex;
     justify-content: center;
     align-items: center;
