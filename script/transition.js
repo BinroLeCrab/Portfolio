@@ -51,8 +51,8 @@ for(i=0; i< Projs.length; i++){
 
         //on ajoute alors la classe "active" pour ajouter le fondu au noir
         let trans = document.querySelector("#transition");
-        let BG = window.getComputedStyle(proj.querySelector('.cover'), null).background;
-        trans.style.background = BG;
+        // let BG = window.getComputedStyle(proj.querySelector('.cover'), null).background;
+        // trans.style.background = BG;
         trans.classList.remove("coucou");
         trans.classList.add("bye");
 

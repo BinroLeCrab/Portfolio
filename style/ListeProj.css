@@ -14,11 +14,13 @@ main {
 .Liste {
     display: flex;
     justify-content: center;
+    padding-bottom: 40px;
 }
 
 .Grille{
     display: grid;
     grid-template-columns: repeat(3, 400px); /*changer pour 2 puis 1 au responsive*/
+    /* grid-template-rows: repeat(auto-fill, minmax(366px, 366px)); */
     gap: 20px;
     /* min-width: 400px;
     width: 80vw;
@@ -30,11 +32,12 @@ main {
     --BckHover : var(--White);
     --TxtHover : var(--Black);
 
+    position: relative;
     display: grid;
     gap: 10px;
     width: 400px;
     height: fit-content;
-    /* height: 366px; */
+    height: 366px;
     padding: 20px;
     border-radius: var(--Rad-ext);
     background-color: var(--Black);
@@ -42,13 +45,15 @@ main {
     text-align: left;
     color: var(--White);
     transition: 0.3s;
+    overflow: hidden;
+    z-index: 2;
 }
 
 .CardsProj:hover {
-    /* height: 484px; */
     box-shadow: -10px 10px 0px var(--BckHover);
     transform: translate(5px, -5px);
     color: var(--TxtHover);
+    z-index: 3;
 }
 
 .CardsProj * {
@@ -56,12 +61,19 @@ main {
 }
 
 .cover {
+    display: flex;
+    justify-content: end;
     width: auto;
     height: 250px;
     border-radius: var(--Rad-int);
     background: var(--urlCover);
     background-position: center;
     background-size: cover;
+    transition: 0.3s;
+}
+
+.CardsProj:hover .cover{
+    height: 185px;
 }
 
 .titleCards {
@@ -86,12 +98,24 @@ main {
     gap: 5px;
 }
 
-/* .cache {
+.cache {
     height: 0px;
     overflow: hidden;
     transition: 0.3s;
 }
 
+.voirProj {
+    padding: 5px;
+    transform: translate(25%, -25%) scale(0) rotate(0Deg);
+    transition: 0.3s;
+    transition-timing-function: cubic-bezier(0.870, 0.075, 0.300, 1.650);
+    
+}
+
 .CardsProj:hover .cache {
     height: fit-content;
-} */
+}
+
+.CardsProj:hover .voirProj {
+    transform: translate(25%, -25%) scale(1) rotate(-40Deg);
+}
