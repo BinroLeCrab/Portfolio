@@ -54,11 +54,29 @@ class Projet {
     public function affListe()
     {
         $reponse = "";
-        $reponse.=sprintf("<a href=\"index.php?id_projet=%s\" class=\"liendivgroupe\">%s</a>\n", $this->id_projet,$this->nom);
+        $reponse.=sprintf("                             <a href=\"projet.php?id_projet=%s\" class=\"CardsProj\" style=\"--urlCover : url(../%s); --BckHover: var(--Blue);\">\n", $this->id_projet, $this->visuel);
+        $reponse.=sprintf("                                 <div class=\"cover\">\n");
+        $reponse.=sprintf("                                     <div class=\"voirProj\"><img class=\"arrowR\" src=\"img/asset/arrowN.svg\" alt=\"Voir le projet\" title=\"Voir le projet\"/></div>\n");
+        $reponse.=sprintf("                                 </div>\n");
+
+        $reponse.=sprintf("                                 <div class=\"tagDiv\">\n");
+        foreach($this->tag as $value) 
+        {
+            $reponse.=sprintf("                                     <p class=\"tag\" style=\"--Bck : %s; --Txt: %s;\">%s</p>\n", $value['couleur_label'], $value['couleur_texte'], $value['nom_label']);
+        }
+        $reponse.=sprintf("                                 </div>\n");
+        
+        $reponse.=sprintf("                                 <div class=\"titleCards\">\n");
+        $reponse.=sprintf("                                     <h4 class=\"tCards\">%s</h4>\n", $this->nom);
+        $reponse.=sprintf("                                     <p class=\"date\">%s</p>\n", $this->date_crea);
+        $reponse.=sprintf("                                 </div>\n");
+        $reponse.=sprintf("                                 <p class=\"pitch cache\">%s</p>\n", $this->accroche);
+
+        $reponse.=sprintf("                             </a>\n");
 
         return $reponse;
     }
-
+    
     public function affDetail()
     {
         $reponse = "";

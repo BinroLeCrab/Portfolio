@@ -1,5 +1,5 @@
 <?php
-require_once("inc/poo.inc.too.php");
+require_once("src/poo.inc.too.php");
 
 function chargetabProjet($listeID)
 {

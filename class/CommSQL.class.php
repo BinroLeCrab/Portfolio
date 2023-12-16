@@ -50,7 +50,7 @@ class CommSQL {
 		}
 
         //requeter
-        $stmtsql = $cnxDB->prepare("SELECT tag.nom_label, tag.couleur_label FROM eti_proj AS tag_proj INNER JOIN etiquettes AS tag ON tag_proj.id_label = tag.id_label  WHERE tag_proj.id_projet = :id;");
+        $stmtsql = $cnxDB->prepare("SELECT tag.nom_label, tag.couleur_label, tag.couleur_texte FROM eti_proj AS tag_proj INNER JOIN etiquettes AS tag ON tag_proj.id_label = tag.id_label  WHERE tag_proj.id_projet = :id;");
 		$stmtsql->bindParam(':id',$id);
 
         $stmtsql->execute();
@@ -104,7 +104,7 @@ class CommSQL {
 		}
 
         //requeter
-        $stmtsql = $cnxDB->prepare("SELECT id_projet FROM projets ORDER BY date_créa ;");
+        $stmtsql = $cnxDB->prepare("SELECT id_projet FROM projets ORDER BY recent DESC ;");
         $stmtsql->execute();
 
         $resulCom = $stmtsql->fetchAll();
