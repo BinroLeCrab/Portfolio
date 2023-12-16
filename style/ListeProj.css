@@ -30,12 +30,13 @@ main {
 .CardsProj {
     --urlCover : url(../img/projet/IME/IME_01.png);
     --BckHover : var(--White);
-    --TxtHover : var(--Black);
 
     position: relative;
     display: grid;
     gap: 10px;
     width: 400px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     height: 366px;
     padding: 20px;
@@ -52,7 +53,6 @@ main {
 .CardsProj:hover {
     box-shadow: -10px 10px 0px var(--BckHover);
     transform: translate(5px, -5px);
-    color: var(--TxtHover);
     z-index: 3;
 }
 
@@ -112,7 +112,14 @@ main {
     
 }
 
+.voirProj > .arrowR {
+    height: 20px;
+    width: 20px;
+}
+
 .CardsProj:hover .cache {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
 }
 

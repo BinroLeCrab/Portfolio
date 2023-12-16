@@ -28,7 +28,10 @@ main {
 }
 
 .illuCouv {
-    background-image: url(../img/projet/IME/IME_01.png);
+
+    --Cover: url(../img/projet/IME/IME_cover.png);
+
+    background-image: var(--Cover);
     background-position: center;
     background-size: cover;
     border-radius: 30px;
@@ -170,6 +173,9 @@ article {
 }
 
 .Equipe {
+    --BG : var(--Blue);
+    --Txt : var(--White);
+    
     display: flex;
     gap: 20px;
     align-items: center;
@@ -181,7 +187,7 @@ article {
     margin-bottom: 0px;
     margin-left: -6vw;
     padding: 9px 10px 9px;
-    background-color: var(--Blue);
+    background-color: var(--BG);
 }
 
 .Equipe p {
@@ -189,17 +195,13 @@ article {
     font-family: var(--Barracuda);
     font-weight: 500;
     font-size: 3.25rem;
-    color: var(--White);
+    color: var(--Txt);
     margin: 11px 0px 0px;
 }
 
 .Copains {
     height: 100%;
     border-radius: 100%;
-}
-
-.Solo {
-    background-color: var(--Black);
 }
 
 
