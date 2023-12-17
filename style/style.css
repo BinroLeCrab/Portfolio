@@ -36,12 +36,16 @@
     right: 1vh;
 
     display: grid;
-    grid-template-columns: fit-content(100%) 1fr repeat(4,fit-content(100%));
-    grid-template-rows: 1fr;
+    grid-template-columns: fit-content(100%) 1fr fit-content(100%);
+    /* grid-template-rows: 1fr; */
+    grid-template-rows: repeat(2, fit-content(100%));
     align-items: center;
     padding: 20px;
-    gap: 10px;
-    grid-template-areas: "Logo . Ac Proj Prop Cont";
+    gap: 0px 10px;
+    /* grid-template-areas: "Logo . menu"; */
+    grid-template-areas: 
+        "Logo . burger"
+        "menu menu menu";
 
     font-family: var(--Barracuda);
     font-size: 1.2rem;
@@ -57,8 +61,40 @@
     top: 1vh;
 }
 
+.Burger {
+    grid-area: burger;
+
+    background: #00000000;
+    border: 0px;
+}
+
+.Burger img {
+    height: 40px;
+}
+
+.Burger .CloseIcon {
+    display: none;
+}
+
 .change_BG_color {
     background-color: var(--Black);
+}
+
+.Menu {
+    grid-area: menu;
+
+    display: grid;
+    grid-template-columns: repeat(3,fit-content(100%));
+    grid-template-rows: 1fr;
+    align-items: center;
+    gap: 10px;
+
+    /* height: 40px;
+    margin-top: 20px; */
+    height: 0px;
+    margin-top: 0px;
+    overflow: hidden;
+    transition: 0.3s;
 }
 
 .NavLink {
@@ -80,7 +116,7 @@
     background-position: -10px 0px;
 }
 
-#NavAc {
+/* #NavAc {
     grid-area: Ac;
 }
 
@@ -90,11 +126,7 @@
 
 #NavProp {
     grid-area: Prop;
-}
-
-#NavCont {
-    grid-area: Cont;
-}
+} */
 
 .logo {
     display: flex;

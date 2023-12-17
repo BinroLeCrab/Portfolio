@@ -1,4 +1,4 @@
-document.addEventListener("unload", (event) => {console.log(event)});
+//// document.addEventListener("unload", (event) => {console.log(event)});
 
 window.addEventListener("load",run,false);
 
