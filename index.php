@@ -48,18 +48,20 @@ require_once("src/output.php");
 
 	</head>
 	<body>
-		<div id="transition" class="bye">Coucou</div>
+		<div id="transition" class="bye">
+			<img src="img/asset/Logo.svg" alt="Logo"/>
+		</div>
 		<nav id="header" class="headTop ChangeBgcolor">
-            <a href="/mmi/Portfolio/sandbox.html" class="logo">
+            <a href="index.php" class="logo Animtrans">
                 <img src="img/asset/Logo.svg" alt="Logo"/>
                 <p>Robin Vigier</p>
             </a>
-            <a href="sandbox.html" class="NavLink Animtrans" id="NavAc">Accueil</a>
-            <a href="sandboxP.html" class="NavLink Animtrans" id="NavProj">Projets</a>
-            <a href="#info" class="NavLink" id="NavProp">À Propos</a>
-            <a href="sandboxProj.html" class="NavLink Animtrans" id="NavCont">Contact</a>
+            <a href="index.php" class="NavLink Animtrans Active" id="NavAc">Accueil</a>
+            <a href="projet.php" class="NavLink Animtrans" id="NavProj">Projets</a>
+            <a href="index.php#info" class="NavLink" id="NavProp">À Propos</a>
+            <!-- <a href="sandboxProj.html" class="NavLink Animtrans" id="NavCont">Contact</a> -->
 		</nav>
-		<div id="Over" class="OverOFF">
+		<!-- <div id="Over" class="OverOFF">
 			<div id="OverCircle">
 				<img id="CircleTxt" src="img/asset/CircleTxtB.svg" alt="Mes Reseaux"/>
 				<img id="Binocle" src="img/asset/BinocleGif.gif" alt=""/>
@@ -72,13 +74,14 @@ require_once("src/output.php");
 				<a href="https://www.instagram.com/robin.vigier/" class="bloc"><img class="OverIcon" src="img/asset/IconInstaN.svg" alt="mon instagram"/></a>
 				<a href="https://www.instagram.com/robin.vigier/" class="bloc"><img class="OverIcon" src="img/asset/IconInstaN.svg" alt="mon instagram"/></a>	
 			</div>
-		</div>
+		</div> -->
 		<main>
 			<section class="heroban">
 				<div class="herotxt">
 					<div>
 						<h1>Robin Vigier</h1>
-						<h2>Etudiant BUT MMI</h2>
+						<h2>UI Designer & Dev Front-End</h2>
+						<!-- <h2>Etudiant BUT MMI</h2> -->
 					</div>
 				</div>
 				<div class="heroarrow">
@@ -130,68 +133,69 @@ require_once("src/output.php");
 							</svg>
 						</div>
 					</div>
-					<a href="projet.php" class ="Btn bloc noDeco center">Voir plus de projets</a>
+					<a href="projet.php" class ="Btn bloc noDeco center Animtrans">Voir plus de projets</a>
 				</article>
 				<article id="info">
 					<h2>Qui Je Suis ?</h2>
 					<div class="infoCards">
 						<div class="ImgInfo"><!--Image--></div>
-						<p class="ParaInfo" id="pIO">Salut ! Moi c'est Robin, j'ai 18 ans et je suis actuellement en 2ème année de BUT Métiers du Multimédia et de l'Internet à l'IUT de Champs sur Marne.</p>
-						<p class="ParaInfo" id="pIT">Passionné par le design d'interface ou le design graphique, je suis multitâche dans ces domaines que j'affectionne tout particulièrement. J'ai également développé un attrait pour le HTML CCS et JavaScript qui me permettent de rendre concrètes les maquettes Figma que je conçois !</p>	
+						<p class="ParaInfo" id="pIO">Salut ! Moi c'est Robin, j'ai 19 ans et je suis actuellement en 2ème année de BUT Métiers du Multimédia et de l'Internet à l'IUT de Champs sur Marne.</p>
+						<p class="ParaInfo" id="pIT">Passionné par le design d'interface et le développement front-end, je suis multitâche dans ces domaines que j'affectionne tout particulièrement. J'ai également développé un attrait pour le design graphique, ce qui me permet d'avoir un regard à la fois esthétique et artistique sur les projets que je réalise !</p>	
 						<p class="ParaInfo" id="pITh">Je suis créatif, organisé, rigoureux, peut-être un peu perfectionniste, mais je me donne toujours à cœur dans les projets que j’entreprends.</p>
 						<!--Paragraphe-->
 					</div>
+					<a href="resources/CV-VIGIER_Robin.pdf" class ="Btn bloc noDeco center Animtrans">Télécharger mon CV</a>
 				</article>
 				<article id="skill">
 					<h2>Je Maitrise ...</h2>
 					<div class="Comp">
 						<div class="Bendeau BckBlue" id="BdC1">
 							<div class="BendeauCont">
-								<span>Dev Front-End</span><img class="BendeauIcon" src="img/asset/IconInstaN.svg" alt=""/>
-								<span>Dev Front-End</span><img class="BendeauIcon" src="img/asset/IconInstaN.svg" alt=""/>
-								<span>Dev Front-End</span><img class="BendeauIcon" src="img/asset/IconInstaN.svg" alt=""/>
-								<span>Dev Front-End</span><img class="BendeauIcon" src="img/asset/IconInstaN.svg" alt=""/>
-								<span>Dev Front-End</span><img class="BendeauIcon" src="img/asset/IconInstaN.svg" alt=""/>
+								<span>Dev Front-End</span><img class="BendeauIcon" src="img/outils/html.svg" alt=""/>
+								<span>Dev Front-End</span><img class="BendeauIcon" src="img/outils/css.svg" alt=""/>
+								<span>Dev Front-End</span><img class="BendeauIcon" src="img/outils/js.svg" alt=""/>
+								<span>Dev Front-End</span><img class="BendeauIcon" src="img/outils/html.svg" alt=""/>
+								<span>Dev Front-End</span><img class="BendeauIcon" src="img/outils/css.svg" alt=""/>
 								<span>Dev Front-End</span>
 							</div>
 						</div>
 						<div class="Bendeau BckBlack" id="BdC2">
 							<div class="BendeauCont">
-								<span>Dev Back-End</span><img class="BendeauIcon" src="img/asset/IconInstaN.svg" alt=""/>
-								<span>Dev Back-End</span><img class="BendeauIcon" src="img/asset/IconInstaN.svg" alt=""/>
-								<span>Dev Back-End</span><img class="BendeauIcon" src="img/asset/IconInstaN.svg" alt=""/>
-								<span>Dev Back-End</span><img class="BendeauIcon" src="img/asset/IconInstaN.svg" alt=""/>
-								<span>Dev Back-End</span><img class="BendeauIcon" src="img/asset/IconInstaN.svg" alt=""/>
+								<span>Dev Back-End</span><img class="BendeauIcon" src="img/outils/php.svg" alt=""/>
+								<span>Dev Back-End</span><img class="BendeauIcon" src="img/outils/sql.svg" alt=""/>
+								<span>Dev Back-End</span><img class="BendeauIcon" src="img/outils/php.svg" alt=""/>
+								<span>Dev Back-End</span><img class="BendeauIcon" src="img/outils/sql.svg" alt=""/>
+								<span>Dev Back-End</span><img class="BendeauIcon" src="img/outils/php.svg" alt=""/>
 								<span>Dev Back-End</span>
 							</div>
 						</div>
 						<div class="Bendeau BckGrey" id="BdC3">
 							<div class="BendeauCont">
-								<span>UI Desing</span><img class="BendeauIcon" src="img/asset/IconInstaN.svg" alt=""/>
-								<span>UI Desing</span><img class="BendeauIcon" src="img/asset/IconInstaN.svg" alt=""/>
-								<span>UI Desing</span><img class="BendeauIcon" src="img/asset/IconInstaN.svg" alt=""/>
-								<span>UI Desing</span><img class="BendeauIcon" src="img/asset/IconInstaN.svg" alt=""/>
-								<span>UI Desing</span><img class="BendeauIcon" src="img/asset/IconInstaN.svg" alt=""/>
-								<span>UI Desing</span>
+								<span>UI Design</span><img class="BendeauIcon" src="img/outils/fig.svg" alt=""/>
+								<span>UI Design</span><img class="BendeauIcon" src="img/outils/hand.png" alt=""/>
+								<span>UI Design</span><img class="BendeauIcon" src="img/outils/fig.svg" alt=""/>
+								<span>UI Design</span><img class="BendeauIcon" src="img/outils/hand.png" alt=""/>
+								<span>UI Design</span><img class="BendeauIcon" src="img/outils/fig.svg" alt=""/>
+								<span>UI Design</span><img class="BendeauIcon" src="img/outils/hand.png" alt=""/>
 							</div>
 						</div>
 						<div class="Bendeau BckWhite" id="BdC4">
 							<div class="BendeauCont">
-								<span>UX Desing</span><img class="BendeauIcon" src="img/asset/IconInstaN.svg" alt=""/>
-								<span>UX Desing</span><img class="BendeauIcon" src="img/asset/IconInstaN.svg" alt=""/>
-								<span>UX Desing</span><img class="BendeauIcon" src="img/asset/IconInstaN.svg" alt=""/>
-								<span>UX Desing</span><img class="BendeauIcon" src="img/asset/IconInstaN.svg" alt=""/>
-								<span>UX Desing</span><img class="BendeauIcon" src="img/asset/IconInstaN.svg" alt=""/>
+								<span>UX Desing</span><img class="BendeauIcon" src="img/outils/loupe.png" alt=""/>
+								<span>UX Desing</span><img class="BendeauIcon" src="img/outils/loupe.png" alt=""/>
+								<span>UX Desing</span><img class="BendeauIcon" src="img/outils/loupe.png" alt=""/>
+								<span>UX Desing</span><img class="BendeauIcon" src="img/outils/loupe.png" alt=""/>
+								<span>UX Desing</span><img class="BendeauIcon" src="img/outils/loupe.png" alt=""/>
 								<span>UX Desing</span>
 							</div>
 						</div>
 						<div class="Bendeau BckBlue" id="BdC5">
 							<div class="BendeauCont">
-								<span>Graphisme</span><img class="BendeauIcon" src="img/asset/IconInstaN.svg" alt=""/>
-								<span>Graphisme</span><img class="BendeauIcon" src="img/asset/IconInstaN.svg" alt=""/>
-								<span>Graphisme</span><img class="BendeauIcon" src="img/asset/IconInstaN.svg" alt=""/>
-								<span>Graphisme</span><img class="BendeauIcon" src="img/asset/IconInstaN.svg" alt=""/>
-								<span>Graphisme</span><img class="BendeauIcon" src="img/asset/IconInstaN.svg" alt=""/>
+								<span>Graphisme</span><img class="BendeauIcon" src="img/outils/ai.svg" alt=""/>
+								<span>Graphisme</span><img class="BendeauIcon" src="img/outils/ps.svg" alt=""/>
+								<span>Graphisme</span><img class="BendeauIcon" src="img/outils/ai.svg" alt=""/>
+								<span>Graphisme</span><img class="BendeauIcon" src="img/outils/ps.svg" alt=""/>
+								<span>Graphisme</span><img class="BendeauIcon" src="img/outils/ai.svg" alt=""/>
 								<span>Graphisme</span>
 							</div>
 						</div>
@@ -200,17 +204,14 @@ require_once("src/output.php");
 			</section>
 		</main>
 		<footer>
-			<p id="NameLink">Robin VIGIER | Accueil Projets À Propos Contact</p>
+			<p id="NameLink">&#129497;Robin VIGIER | <a class="noDeco" href="index.php">Accueil</a> <a class="noDeco" href="projet.php">Projets</a> <a class="noDeco" href="index.php#info">À Propos</a> <!--Contact--></p>
 			<a id="Email" class="noDeco" href="mailto:robin.vigier.pro@gmail.com">robin.vigier.pro@gmail.com</a>
-			<a id="Print" class="noDeco blue">Version print du Portfolio</a>
+			<a id="Print" class="noDeco blue" href="resources/CV-VIGIER_Robin.pdf">Télécharger mon CV</a>
 			<p id="FootInfo">Site web codé en décembre 2023</p>
 			<div id="ResFoot">
-				<a href="https://www.instagram.com/robin.vigier/" class="bloc"><img class="FootIcon" src="img/asset/IconInstaN.svg" alt="mon instagram"/></a>
-				<a href="https://www.instagram.com/robin.vigier/" class="bloc"><img class="FootIcon" src="img/asset/IconInstaN.svg" alt="mon instagram"/></a>
-				<a href="https://www.instagram.com/robin.vigier/" class="bloc"><img class="FootIcon" src="img/asset/IconInstaN.svg" alt="mon instagram"/></a>
-				<a href="https://www.instagram.com/robin.vigier/" class="bloc"><img class="FootIcon" src="img/asset/IconInstaN.svg" alt="mon instagram"/></a>
-				<a href="https://www.instagram.com/robin.vigier/" class="bloc"><img class="FootIcon" src="img/asset/IconInstaN.svg" alt="mon instagram"/></a>
-				<a href="https://www.instagram.com/robin.vigier/" class="bloc"><img class="FootIcon" src="img/asset/IconInstaN.svg" alt="mon instagram"/></a>
+				<a href="https://github.com/BinroLeCrab/" class="bloc"><img class="FootIcon" src="img/asset/IconGithubN.svg" alt="mon GitHub"/></a>
+				<a href="https://www.linkedin.com/in/robin-vigier-02353b267/" class="bloc"><img class="FootIcon" src="img/asset/IconLinkedinN.svg" alt="mon profil Linkedin"/></a>
+				<a href="https://bento.me/robinv" class="bloc"><img class="FootIcon" src="img/asset/IconBentoN.svg" alt="mon Bento"/></a>
 			</div>
 			<!-- <p><a href="https://bento.me/robinv">VIGIER Robin</a>, 2023. Illustrations&#x202F;: tous droits r&#xE9;serv&#xE9;s. <a href="index.php?MENTION">Mentions l&#xE9;gales</a>. -->
 		</footer>

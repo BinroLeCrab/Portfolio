@@ -42,7 +42,8 @@ function ToTheLeft() {
 
     if (arrivée > 0 || l == 0) {
         console.log("retour origine");
-        slider.style.left = `-${slider.offsetWidth - Cards}px`;
+        slider.style.left = `-${slider.offsetWidth - Cards
+        }px`;
         // Anim();
     } else {
         slider.style.left = `${l + walkSlider}px`;
@@ -71,7 +72,7 @@ function ToTheRight() {
     }
 }
 
-setInterval(ToTheRight, 10000);
+// setInterval(ToTheRight, 10000);
 
 /*   _____     _____
     |  _  |   |  _  |

@@ -7,6 +7,10 @@ body {
     background-attachment: fixed;
 }
 
+article {
+    margin: 60px 0px;
+}
+
 /* Hero */
 
 .heroban{
@@ -66,6 +70,7 @@ body {
 /* Derniers Projets */
 
 #liste {
+    margin-top: 0px;
     margin-left: -30px;
     margin-right: -30px;
     overflow: hidden;
@@ -79,6 +84,7 @@ body {
 
     --WidthCards : 400px;
 
+    margin: 30px 0px;
     position: relative;
     /* background-color: blue; */
     width: 100%;
@@ -287,8 +293,7 @@ body {
     color: var(--White);
     text-align: left;
 
-    margin-left: auto;
-    margin-right: auto;
+    margin: 30px auto;
 }
 
 .ImgInfo {
@@ -320,6 +325,7 @@ body {
 #skill {
     margin-left: -30px;
     margin-right: -30px;
+    margin-bottom: 0px;
     overflow: hidden;
 }
 

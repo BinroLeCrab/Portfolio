@@ -82,6 +82,12 @@ main {
     align-items: center;
 }
 
+.tCards {
+    text-overflow: ellipsis;
+    height: 1.5rem;
+    max-width: 273px;
+}
+
 .date {
     font-weight: 500;
     font-size: 0.875rem;

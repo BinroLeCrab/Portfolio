@@ -11,6 +11,7 @@ class Projet {
     public $visuel;
     public $detail;
     public $cover;
+    public $type;
 
     public function __construct($id)
     {
@@ -38,6 +39,7 @@ class Projet {
             $this->visuel = $this->info[0]['visuel'];
             $this->detail = $this->info[0]['detail'];
             $this->cover = $this->info[0]['cover'];
+            $this->type = $this->info[0]['type'];
         };
     }
 
@@ -56,7 +58,7 @@ class Projet {
     public function affListe()
     {
         $reponse = "";
-        $reponse.=sprintf("                             <a href=\"projet.php?id_projet=%s\" class=\"CardsProj\" style=\"--urlCover : url(../%s); --BckHover: var(--Blue);\">\n", $this->id_projet, $this->visuel);
+        $reponse.=sprintf("                             <a href=\"projet.php?id_projet=%s\" class=\"CardsProj\" style=\"--urlCover : url(../%s); --BckHover: %s;\">\n", $this->id_projet, $this->visuel, $this->type);
         $reponse.=sprintf("                                 <div class=\"cover\">\n");
         $reponse.=sprintf("                                     <div class=\"voirProj\"><img class=\"arrowR\" src=\"img/asset/arrowN.svg\" alt=\"Voir le projet\" title=\"Voir le projet\"/></div>\n");
         $reponse.=sprintf("                                 </div>\n");

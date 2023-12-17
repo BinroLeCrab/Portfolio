@@ -8,8 +8,12 @@ function echoSlider($liste)
 
 	$reponse.=sprintf("<div class=\"slider\">\n");
 
+	$i = 0;
 	foreach ($liste as $projet){
-		$reponse.= $projet->affListe();
+		if ($i < 4){
+			$reponse.= $projet->affListe();
+			$i++;
+		}
 	};
 	
 	$reponse.=sprintf("							</div>\n");

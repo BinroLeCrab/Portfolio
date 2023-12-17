@@ -13,10 +13,6 @@ gsap.set(".Back",{
     marginTop: "-20%"
 });
 
-gsap.set(".InfoProj, footer",{
-    visibility: "hidden"
-});
-
 setTimeout(function(){
     const ap = gsap.timeline();
 
@@ -41,10 +37,7 @@ setTimeout(function(){
     ap.set(".illuCouv", {
         height: 'auto'
     });
-
-    ap.set(".InfoProj, footer",{
-    visibility: "visible"
-    });
+    
 }, 1500)
 
 

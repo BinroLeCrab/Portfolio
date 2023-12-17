@@ -15,6 +15,10 @@
     pointer-events: none;
 }
 
+#transition > img {
+    height: 100px;
+}
+
 .coucou {
     height: 0vh;
 }
@@ -335,7 +339,14 @@ footer > p {
 }
 
 
-
+.Active::after {
+    content: "";
+    display: block;
+    height: 5px;
+    width: 110%;
+    margin-left: -5%;
+    background: var(--Blue);
+}
 /*p {
     cursor: url(../img/asset/Txt_perso.svg) 9 10, auto;
 }*/

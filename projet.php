@@ -65,7 +65,9 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"></script>
 	</head>
     <body>
-        <div id="transition" class="bye">Coucou</div>
+        <div id="transition" class="bye">
+			<img src="img/asset/Logo.svg" alt="Logo"/>
+		</div>
 
         <?php
             if($flag == 1) {
@@ -74,14 +76,23 @@
                 echo "<nav id=\"header\" class=\"headTop ChangeBgcolor\">\n";
             }
         ?>
-            <a href="/mmi/Portfolio/sandbox.html" class="logo">
+
+            <a href="index.php" class="logo Animtrans">
                 <img src="img/asset/Logo.svg" alt="Logo"/>
                 <p>Robin Vigier</p>
             </a>
-            <a href="sandbox.html" class="NavLink Animtrans" id="NavAc">Accueil</a>
-            <a href="sandboxP.html" class="NavLink Animtrans" id="NavProj">Projets</a>
-            <a href="sandboxProj.html" class="NavLink Animtrans" id="NavProp">À Propos</a>
-            <a href="sandboxProj.html" class="NavLink Animtrans" id="NavCont">Contact</a>
+            <a href="index.php" class="NavLink Animtrans" id="NavAc">Accueil</a>
+
+        <?php
+            if($flag == 1) {
+                echo "<a href=\"projet.php\" class=\"NavLink Animtrans\" id=\"NavProj\">Projets</a>\n";
+            } else {
+                echo "<a href=\"projet.php\" class=\"NavLink Animtrans Active\" id=\"NavProj\">Projets</a>\n";
+            }
+        ?>
+
+            <a href="index.php#info" class="NavLink Animtrans" id="NavProp">À Propos</a>
+            <!-- <a href="sandboxProj.html" class="NavLink Animtrans" id="NavCont">Contact</a> -->
 		</nav>
         <main>
             <?php 
@@ -93,19 +104,17 @@
             ?>
         </main>
         <footer>
-            <p id="NameLink">Robin VIGIER | Accueil Projets À Propos Contact</p>
-            <a id="Email" class="noDeco" href="mailto:robin.vigier.pro@gmail.com">robin.vigier.pro@gmail.com</a>
-            <a id="Print" class="noDeco blue">Version print du Portfolio</a>
-            <p id="FootInfo">Site web codé en décembre 2023</p>
-            <div id="ResFoot">
-                <a href="https://www.instagram.com/robin.vigier/" class="bloc"><img class="FootIcon" src="img/asset/IconInstaN.svg" alt="mon instagram"/></a>
-                <a href="https://www.instagram.com/robin.vigier/" class="bloc"><img class="FootIcon" src="img/asset/IconInstaN.svg" alt="mon instagram"/></a>
-                <a href="https://www.instagram.com/robin.vigier/" class="bloc"><img class="FootIcon" src="img/asset/IconInstaN.svg" alt="mon instagram"/></a>
-                <a href="https://www.instagram.com/robin.vigier/" class="bloc"><img class="FootIcon" src="img/asset/IconInstaN.svg" alt="mon instagram"/></a>
-                <a href="https://www.instagram.com/robin.vigier/" class="bloc"><img class="FootIcon" src="img/asset/IconInstaN.svg" alt="mon instagram"/></a>
-                <a href="https://www.instagram.com/robin.vigier/" class="bloc"><img class="FootIcon" src="img/asset/IconInstaN.svg" alt="mon instagram"/></a>
-            </div>
-        </footer>
+			<p id="NameLink">&#129497;Robin VIGIER | <a class="noDeco" href="index.php">Accueil</a> <a class="noDeco" href="projet.php">Projets</a> <a class="noDeco" href="index.php#info">À Propos</a> <!--Contact--></p>
+			<a id="Email" class="noDeco" href="mailto:robin.vigier.pro@gmail.com">robin.vigier.pro@gmail.com</a>
+			<a id="Print" class="noDeco blue" href="resources/CV-VIGIER_Robin.pdf">Télécharger mon CV</a>
+			<p id="FootInfo">Site web codé en décembre 2023</p>
+			<div id="ResFoot">
+				<a href="https://github.com/BinroLeCrab/" class="bloc"><img class="FootIcon" src="img/asset/IconGithubN.svg" alt="mon GitHub"/></a>
+				<a href="https://www.linkedin.com/in/robin-vigier-02353b267/" class="bloc"><img class="FootIcon" src="img/asset/IconLinkedinN.svg" alt="mon profil Linkedin"/></a>
+				<a href="https://bento.me/robinv" class="bloc"><img class="FootIcon" src="img/asset/IconBentoN.svg" alt="mon Bento"/></a>
+			</div>
+			<!-- <p><a href="https://bento.me/robinv">VIGIER Robin</a>, 2023. Illustrations&#x202F;: tous droits r&#xE9;serv&#xE9;s. <a href="index.php?MENTION">Mentions l&#xE9;gales</a>. -->
+		</footer>
 
         <script type="text/javascript" src="script/transition.js"></script>
         <?php 
