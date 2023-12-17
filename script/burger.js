@@ -9,14 +9,17 @@ function run() {
 
     burger.addEventListener("click", () => {
         if(flag == 0) {
-            menu.style.height = "40px";
+
+            menu.classList.remove("ferme");
+            menu.classList.add("ouvert");
             menu.style.marginTop = "20px";
 
             IconBurg.style.display = "none";
             IconClose.style.display = "initial";
             flag = 1;
         } else {
-            menu.style.height = "0px";
+            menu.classList.remove("ouvert");
+            menu.classList.add("ferme");
             menu.style.marginTop = "0px";
             
             IconBurg.style.display = "initial";

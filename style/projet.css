@@ -65,6 +65,7 @@ main {
 .date {
     margin: 0vh 0vh 2vh;
     align-self: center;
+    color: var(--Black);
 }
 
 .GridHeroRight {
@@ -222,26 +223,3 @@ article p {
 }
 
 
-#helicoO {
-    width: 30px;
-    height: 30px;
-    background-color: blue;
-
-    transition: 0.3s;
-    transform: rotateY(0deg);
-    -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
-}
-
-#helicoT {
-    position: relative;
-    top: -30px;
-    width: 30px;
-    height: 30px;
-    background-color: red;
-
-    transition: 0.3s;
-    transform: rotateY(180deg);
-    -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
-}

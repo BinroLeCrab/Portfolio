@@ -1,0 +1,104 @@
+/* ! Ce que j'ai supprr */
+
+#Over {
+    position: fixed;
+    right: 1vw;
+    bottom: 1vw;
+
+    border-radius: 500px;
+    height: 100px;
+    width: 100px;
+    
+    transition: 0.3s;
+
+    z-index: 100;
+}
+
+#OverCircle {
+    
+    position: relative;
+    background: var(--Blue);
+    border-radius: 500px;
+    height: 100px;
+    width: 100px;
+
+    z-index: 100;
+}
+
+.OverON {
+    opacity: 1;
+}
+
+.OverOFF {
+    opacity: 0;
+}
+
+#CircleTxt {
+    position: relative;
+    height: 95%;
+    width: 95%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+
+#Binocle {
+    position: relative;
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-7deg);
+    height: 75%;
+}
+
+#ResOver {
+    position: relative;
+    z-index: 99;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ResNoClick {
+    height: 0px;
+    bottom: 0%;
+}
+
+.ResClick {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    bottom: 276%;
+}
+
+.OverIcon {
+    height: 25px;
+    width: 25px;
+}
+
+#helicoO {
+    width: 30px;
+    height: 30px;
+    background-color: blue;
+
+    transition: 0.3s;
+    transform: rotateY(0deg);
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+}
+
+#helicoT {
+    position: relative;
+    top: -30px;
+    width: 30px;
+    height: 30px;
+    background-color: red;
+
+    transition: 0.3s;
+    transform: rotateY(180deg);
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+}

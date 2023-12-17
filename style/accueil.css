@@ -29,7 +29,7 @@ article {
     justify-content: center;
 }
 
-.herotxt > div > h2 {
+.herotxt > div > .h2 {
     margin: -8px 0px;
     font-size: 1.8rem;
     font-family: var(--Stolzl);
@@ -167,106 +167,6 @@ article {
     left: 0px;
 
     transition: 0.5s;
-}
-
-.CardsProj {
-    --urlCover : url(../img/projet/IME/IME_01.png);
-    --BckHover : var(--White);
-
-    position: relative;
-    display: grid;
-    gap: 10px;
-    width: 400px;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-    height: 366px;
-    padding: 20px;
-    border-radius: var(--Rad-ext);
-    background-color: var(--Black);
-    text-decoration: none;
-    text-align: left;
-    color: var(--White);
-    transition: 0.3s;
-    overflow: hidden;
-    z-index: 2;
-}
-
-.CardsProj:hover {
-    box-shadow: -10px 10px 0px var(--BckHover);
-    transform: translate(5px, -5px);
-    z-index: 3;
-}
-
-.CardsProj * {
-    margin: 0px;
-}
-
-.cover {
-    display: flex;
-    justify-content: end;
-    width: auto;
-    height: 250px;
-    border-radius: var(--Rad-int);
-    background: var(--urlCover);
-    background-position: center;
-    background-size: cover;
-    transition: 0.3s;
-}
-
-.CardsProj:hover .cover{
-    height: 185px;
-}
-
-.titleCards {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-}
-
-.date {
-    font-weight: 500;
-    font-size: 0.875rem;
-    color: var(--Grey);
-}
-
-.basCards {
-    display: flex;
-    justify-content: space-between;
-}
-
-.outilCards {
-    display: flex;
-    gap: 5px;
-}
-
-.cache {
-    height: 0px;
-    overflow: hidden;
-    transition: 0.3s;
-}
-
-.voirProj {
-    padding: 5px;
-    transform: translate(25%, -25%) scale(0) rotate(0Deg);
-    transition: 0.3s;
-    transition-timing-function: cubic-bezier(0.870, 0.075, 0.300, 1.650);
-    
-}
-
-.voirProj > .arrowR {
-    height: 20px;
-    width: 20px;
-}
-
-.CardsProj:hover .cache {
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-}
-
-.CardsProj:hover .voirProj {
-    transform: translate(25%, -25%) scale(1) rotate(-40Deg);
 }
 
 /* Info */

@@ -76,23 +76,27 @@
                 echo "<nav id=\"header\" class=\"headTop ChangeBgcolor\">\n";
             }
         ?>
-
-            <a href="index.php" class="logo Animtrans">
+            <a href="index.php" class="logo">
                 <img src="img/asset/Logo.svg" alt="Logo"/>
                 <p>Robin Vigier</p>
             </a>
-            <a href="index.php" class="NavLink Animtrans" id="NavAc">Accueil</a>
+			<div class="Menu">
+				<a href="index.php" class="NavLink Animtrans" id="NavAc">Accueil</a>
 
-        <?php
-            if($flag == 1) {
-                echo "<a href=\"projet.php\" class=\"NavLink Animtrans\" id=\"NavProj\">Projets</a>\n";
-            } else {
-                echo "<a href=\"projet.php\" class=\"NavLink Animtrans Active\" id=\"NavProj\">Projets</a>\n";
-            }
-        ?>
-
-            <a href="index.php#info" class="NavLink Animtrans" id="NavProp">À Propos</a>
-            <!-- <a href="sandboxProj.html" class="NavLink Animtrans" id="NavCont">Contact</a> -->
+                <?php
+                    if($flag == 1) {
+                        echo "<a href=\"projet.php\" class=\"NavLink Animtrans\" id=\"NavProj\">Projets</a>\n";
+                    } else {
+                        echo "<a href=\"projet.php\" class=\"NavLink Animtrans Active\" id=\"NavProj\">Projets</a>\n";
+                    }
+                ?>
+				<a href="index.php#info" class="NavLink" id="NavProp">À Propos</a>
+				<!-- <a href="sandboxProj.html" class="NavLink Animtrans" id="NavCont">Contact</a> -->
+			</div>
+			<button class="Burger">
+				<img class="BurgerIcon" src="img/asset/burger.svg" alt="Ouvrir Menu"/>
+				<img class="CloseIcon" src="img/asset/close.svg" alt="Fermer Menu"/>
+			</button>
 		</nav>
         <main>
             <?php 
@@ -117,6 +121,7 @@
 		</footer>
 
         <script type="text/javascript" src="script/transition.js"></script>
+		<script type="text/javascript" src="script/burger.js"></script>
         <?php 
             if($flag == 1) {
                 echo "<script type=\"text/javascript\" src=\"script/transitionProj.js\"></script>\n";

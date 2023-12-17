@@ -52,36 +52,28 @@ require_once("src/output.php");
 			<img src="img/asset/Logo.svg" alt="Logo"/>
 		</div>
 		<nav id="header" class="headTop ChangeBgcolor">
-            <a href="index.php" class="logo Animtrans">
+            <a href="index.php" class="logo">
                 <img src="img/asset/Logo.svg" alt="Logo"/>
                 <p>Robin Vigier</p>
             </a>
-            <a href="index.php" class="NavLink Animtrans Active" id="NavAc">Accueil</a>
-            <a href="projet.php" class="NavLink Animtrans" id="NavProj">Projets</a>
-            <a href="index.php#info" class="NavLink" id="NavProp">À Propos</a>
-            <!-- <a href="sandboxProj.html" class="NavLink Animtrans" id="NavCont">Contact</a> -->
+			<div class="Menu">
+				<a href="index.php" class="NavLink Animtrans Active" id="NavAc">Accueil</a>
+				<a href="projet.php" class="NavLink Animtrans" id="NavProj">Projets</a>
+				<a href="index.php#info" class="NavLink" id="NavProp">À Propos</a>
+				<!-- <a href="sandboxProj.html" class="NavLink Animtrans" id="NavCont">Contact</a> -->
+			</div>
+			<button class="Burger">
+				<img class="BurgerIcon" src="img/asset/burger.svg" alt="Ouvrir Menu"/>
+				<img class="CloseIcon" src="img/asset/close.svg" alt="Fermer Menu"/>
+			</button>
 		</nav>
-		<!-- <div id="Over" class="OverOFF">
-			<div id="OverCircle">
-				<img id="CircleTxt" src="img/asset/CircleTxtB.svg" alt="Mes Reseaux"/>
-				<img id="Binocle" src="img/asset/BinocleGif.gif" alt=""/>
-			</div>
-			<div id="ResOver" class="ResNoClick">
-				<a href="https://www.instagram.com/robin.vigier/" class="bloc"><img class="OverIcon" src="img/asset/IconInstaN.svg" alt="mon instagram"/></a>
-				<a href="https://www.instagram.com/robin.vigier/" class="bloc"><img class="OverIcon" src="img/asset/IconInstaN.svg" alt="mon instagram"/></a>
-				<a href="https://www.instagram.com/robin.vigier/" class="bloc"><img class="OverIcon" src="img/asset/IconInstaN.svg" alt="mon instagram"/></a>
-				<a href="https://www.instagram.com/robin.vigier/" class="bloc"><img class="OverIcon" src="img/asset/IconInstaN.svg" alt="mon instagram"/></a>
-				<a href="https://www.instagram.com/robin.vigier/" class="bloc"><img class="OverIcon" src="img/asset/IconInstaN.svg" alt="mon instagram"/></a>
-				<a href="https://www.instagram.com/robin.vigier/" class="bloc"><img class="OverIcon" src="img/asset/IconInstaN.svg" alt="mon instagram"/></a>	
-			</div>
-		</div> -->
 		<main>
 			<section class="heroban">
 				<div class="herotxt">
 					<div>
-						<h1>Robin Vigier</h1>
-						<h2>UI Designer & Dev Front-End</h2>
-						<!-- <h2>Etudiant BUT MMI</h2> -->
+						<h1 class="h1">Robin Vigier</h1>
+						<h2 class="h2">UI Designer & Dev Front-End</h2>
+						<!-- <h2 class="h2">Etudiant BUT MMI</h2> -->
 					</div>
 				</div>
 				<div class="heroarrow">
@@ -97,7 +89,7 @@ require_once("src/output.php");
 			</section>
 			<section id="main">
 				<article id="liste">
-					<h2>Mes derniers projets</h2>
+					<h2 class="h2">Mes derniers projets</h2>
 					<div class="carou">
 						<div id="left" class="Slnav">
 							<!-- <img class="Slid" src="img/asset/SlidL.svg" alt=""/> -->
@@ -136,7 +128,7 @@ require_once("src/output.php");
 					<a href="projet.php" class ="Btn bloc noDeco center Animtrans">Voir plus de projets</a>
 				</article>
 				<article id="info">
-					<h2>Qui Je Suis ?</h2>
+					<h2 class="h2">Qui Je Suis ?</h2>
 					<div class="infoCards">
 						<div class="ImgInfo"><!--Image--></div>
 						<p class="ParaInfo" id="pIO">Salut ! Moi c'est Robin, j'ai 19 ans et je suis actuellement en 2ème année de BUT Métiers du Multimédia et de l'Internet à l'IUT de Champs sur Marne.</p>
@@ -147,7 +139,7 @@ require_once("src/output.php");
 					<a href="resources/CV-VIGIER_Robin.pdf" class ="Btn bloc noDeco center Animtrans">Télécharger mon CV</a>
 				</article>
 				<article id="skill">
-					<h2>Je Maitrise ...</h2>
+					<h2 class="h2">Je Maitrise ...</h2>
 					<div class="Comp">
 						<div class="Bendeau BckBlue" id="BdC1">
 							<div class="BendeauCont">
@@ -216,6 +208,7 @@ require_once("src/output.php");
 			<!-- <p><a href="https://bento.me/robinv">VIGIER Robin</a>, 2023. Illustrations&#x202F;: tous droits r&#xE9;serv&#xE9;s. <a href="index.php?MENTION">Mentions l&#xE9;gales</a>. -->
 		</footer>
 
+		<script type="text/javascript" src="script/burger.js"></script>
 		<script type="text/javascript" src="script/slider.js"></script>
 		<script type="text/javascript" src="script/transition.js"></script>
 	</body>

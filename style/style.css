@@ -37,12 +37,10 @@
 
     display: grid;
     grid-template-columns: fit-content(100%) 1fr fit-content(100%);
-    /* grid-template-rows: 1fr; */
     grid-template-rows: repeat(2, fit-content(100%));
     align-items: center;
     padding: 20px;
     gap: 0px 10px;
-    /* grid-template-areas: "Logo . menu"; */
     grid-template-areas: 
         "Logo . burger"
         "menu menu menu";
@@ -84,17 +82,23 @@
     grid-area: menu;
 
     display: grid;
-    grid-template-columns: repeat(3,fit-content(100%));
-    grid-template-rows: 1fr;
+    grid-template-columns: repeat(2,fit-content(100%));
+    grid-template-rows: 1fr 1fr;
     align-items: center;
-    gap: 10px;
+    gap: 0px 10px;
 
-    /* height: 40px;
-    margin-top: 20px; */
     height: 0px;
     margin-top: 0px;
     overflow: hidden;
     transition: 0.3s;
+}
+
+.ouvert {
+    height: 80px;
+}
+
+.ferme {
+    height: 0px;
 }
 
 .NavLink {
@@ -145,87 +149,11 @@
     color: var(--White);
 }
 
-#Over {
-    position: fixed;
-    right: 1vw;
-    bottom: 1vw;
 
-    border-radius: 500px;
-    height: 100px;
-    width: 100px;
-    
-    transition: 0.3s;
-
-    z-index: 100;
-}
-
-#OverCircle {
-    
-    position: relative;
-    background: var(--Blue);
-    border-radius: 500px;
-    height: 100px;
-    width: 100px;
-
-    z-index: 100;
-}
-
-.OverON {
-    opacity: 1;
-}
-
-.OverOFF {
-    opacity: 0;
-}
-
-#CircleTxt {
-    position: relative;
-    height: 95%;
-    width: 95%;
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
-}
-
-#Binocle {
-    position: relative;
-    top: -50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(-7deg);
-    height: 75%;
-}
-
-#ResOver {
-    position: relative;
-    z-index: 99;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    
-    overflow: hidden;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.ResNoClick {
-    height: 0px;
-    bottom: 0%;
-}
-
-.ResClick {
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-    bottom: 276%;
-}
-
-.OverIcon {
-    height: 25px;
-    width: 25px;
-}
 
 .tagDiv {
     display: flex;
+    flex-wrap: wrap;
     gap: 5px;
     height: -webkit-fit-content;
     height: -moz-fit-content;
@@ -241,7 +169,7 @@
     margin: 0px;
     border-radius: var(--Rad-ext);
     background-color: var(--Bck);
-    font-size: 0.875rem;
+    font-size: 0.688rem;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
@@ -275,6 +203,115 @@
     height: 40px;
     width: 40px;
 }
+
+/* Cards projet */
+
+.CardsProj {
+    --urlCover : url(../img/projet/IME/IME_01.png);
+    --BckHover : var(--White);
+
+    position: relative;
+    display: grid;
+    gap: 10px;
+    width: 270px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 10px;
+    border-radius: var(--Rad-ext);
+    background-color: var(--Black);
+    text-decoration: none;
+    text-align: left;
+    color: var(--White);
+    transition: 0.3s;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.CardsProj:hover {
+    box-shadow: -10px 10px 0px var(--BckHover);
+    transform: translate(5px, -5px);
+    z-index: 3;
+}
+
+.CardsProj * {
+    margin: 0px;
+}
+
+.cover {
+    display: flex;
+    justify-content: end;
+    width: auto;
+    height: 185px;
+    border-radius: var(--Rad-int);
+    background: var(--urlCover);
+    background-position: center;
+    background-size: cover;
+    transition: 0.3s;
+}
+
+.CardsProj:hover .cover{
+    height: 185px;
+}
+
+.titleCards {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: start;
+}
+
+.tCards {
+    text-overflow: ellipsis;
+    height: 1.5rem;
+    max-width: 273px;
+}
+
+.date {
+    font-weight: 500;
+    font-size: 0.875rem;
+    color: var(--Grey);
+}
+
+.basCards {
+    display: flex;
+    justify-content: space-between;
+}
+
+.outilCards {
+    display: flex;
+    gap: 5px;
+}
+
+.cache {
+    height: 0px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.voirProj {
+    padding: 5px;
+    transform: translate(25%, -25%) scale(0) rotate(0Deg);
+    transition: 0.3s;
+    transition-timing-function: cubic-bezier(0.870, 0.075, 0.300, 1.650);
+    
+}
+
+.voirProj > .arrowR {
+    height: 20px;
+    width: 20px;
+}
+
+.CardsProj:hover .cache {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+}
+
+.CardsProj:hover .voirProj {
+    transform: translate(25%, -25%) scale(1) rotate(-40Deg);
+}
+
 
 /* Bouton */
 
@@ -320,23 +357,26 @@ figure {
 
 footer {
     display: grid;
-    grid-template-columns: 1fr -webkit-min-content;
-    grid-template-columns: 1fr min-content;
-    grid-template-rows: -webkit-min-content -webkit-min-content 20px -webkit-min-content;
-    grid-template-rows: min-content min-content 20px min-content;
+    grid-template-columns: 1fr fit-content(100%);
+    grid-template-rows: 1fr;
     grid-template-areas: 
-        "NL M"
-        "P ."
-        ". ."
-        "FI RF";
+        "NL RF"
+        "M M"
+        "P P"
+        "FI FI";
     align-items: center;
+    gap: 10px;
 
-    padding: 40px 100px 50px;
+    padding: 40px 20px 50px;
     background-color: var(--White);
 }
 
 footer > p {
     margin: 5px 0px;
+}
+
+footer .mask {
+    display: none;
 }
 
 #NameLink {
@@ -383,6 +423,124 @@ footer > p {
     cursor: url(../img/asset/Txt_perso.svg) 9 10, auto;
 }*/
 
+@media (min-width: 400px) {
+    /* * {
+        background-color: blue;
+    } */
+
+    .Menu {
+        grid-template-columns: repeat(3,fit-content(100%));
+        grid-template-rows: 1fr;
+        align-items: center;
+    }
+
+    .ouvert {
+        height: 80px;
+    }
+
+    
+
+    footer {
+        grid-template-columns: 1fr -webkit-min-content;
+        grid-template-columns: 1fr min-content;
+        grid-template-rows: -webkit-min-content -webkit-min-content 20px -webkit-min-content;
+        grid-template-rows: min-content min-content 20px min-content;
+        grid-template-areas: 
+            "NL M"
+            "P ."
+            ". ."
+            "FI RF";
+        gap: 0px;
+    
+        padding: 40px 100px 50px;
+    }
+
+    footer .mask {
+        display: initial;
+    }
+}
+
+@media (min-width: 800px) {
+    /* * {
+        background-color: red;
+    } */
+
+    #header {
+        
+        grid-template-columns: fit-content(100%) 1fr fit-content(100%);
+        grid-template-rows: 1fr;
+        grid-template-areas: "Logo . menu";
+    }
+
+    .Burger {
+        display: none;
+    }
+
+    .Menu {
+        height: fit-content;
+        margin-top: 0px;
+    }
+
+    .CardsProj {
+        width: 400px;
+        height: 366px;
+        padding: 20px;
+    }
+    
+    .CardsProj:hover {
+        box-shadow: -10px 10px 0px var(--BckHover);
+        transform: translate(5px, -5px);
+        z-index: 3;
+    }
+
+    .cover {
+        display: flex;
+        justify-content: end;
+        width: auto;
+        height: 250px;
+        border-radius: var(--Rad-int);
+        background: var(--urlCover);
+        background-position: center;
+        background-size: cover;
+        transition: 0.3s;
+    }
+    
+    .CardsProj:hover .cover{
+        height: 185px;
+    }
+
+    .titleCards {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .tagDiv {
+        flex-wrap: nowrap;
+    }
+    
+    .tag {
+        font-size: 0.875rem;
+    }
+    
+    .voirProj {
+        padding: 5px;
+        transform: translate(25%, -25%) scale(0) rotate(0Deg);
+        transition: 0.3s;
+        transition-timing-function: cubic-bezier(0.870, 0.075, 0.300, 1.650);
+        
+    }
+    
+    .voirProj > .arrowR {
+        height: 20px;
+        width: 20px;
+    }
+    
+    .CardsProj:hover .cache {
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
+        height: fit-content;
+    }
+}
 
 
 
