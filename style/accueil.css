@@ -17,30 +17,42 @@ article {
     height: 100vh;
 
     display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr fit-content(100%) 1fr;
+    grid-template-rows: 1fr 5fr 2fr min-content;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "."
+        "illu"
+        "txt"
+        "arr";
+    gap: 20px 0px;
     align-items: center;
 }
 
 .herotxt {
+    grid-area: txt;
     color: var(--White);
-    
+    width: 100%;
     display: flex;
     justify-content: center;
+    align-self: flex-start;
+
+    text-align: center;
 }
 
 .herotxt > div > .h2 {
     margin: -8px 0px;
-    font-size: 1.8rem;
+    font-size: 1.1rem;
     font-family: var(--Stolzl);
     color: var(--Grey);
 }
 
 .heroarrow {
+    grid-area: arr;
     display: flex;
     align-items: flex-end;
     justify-content: center;
     height: 90%;
+    padding-bottom: 20px;
 }
 
 .heroarrow > img {
@@ -48,6 +60,8 @@ article {
 }
 
 .heroillu {
+    grid-area: illu;
+    width: 100%;
     text-align: center;
 }
 
@@ -63,7 +77,7 @@ article {
 #main {
     background-color: var(--Grey);
     text-align: center;
-    padding: 30px 30px 0px;
+    padding: 20px 20px 0px;
     border-radius: var(--Rad-main);
 }
 
@@ -71,8 +85,8 @@ article {
 
 #liste {
     margin-top: 0px;
-    margin-left: -30px;
-    margin-right: -30px;
+    margin-left: -20px;
+    margin-right: -20px;
     overflow: hidden;
     padding-bottom: 10px;
 }
@@ -91,11 +105,12 @@ article {
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
-    display: grid;
+    
     grid-template-columns: 1fr var(--WidthCards) 1fr;
     justify-content: space-between;
     grid-template-areas: "l c r";
 
+    display: none;
 }
 
 .Slnav {
@@ -169,22 +184,46 @@ article {
     transition: 0.5s;
 }
 
+.sliderM {
+
+    height: fit-content;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    gap: 20px;
+    padding: 0px 20px;
+    margin: 30px 0px;
+    overflow-y: visible;
+    overflow-x: scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+
+    transition: 0.5s;
+}
+
+.sliderM::-webkit-scrollbar {
+    display: none;
+}
+
 /* Info */
 
 .infoCards {
     display: grid;
-    grid-template-columns: 5fr 20px 6fr;
-    grid-template-rows: 1fr -webkit-min-content -webkit-min-content -webkit-min-content 1fr;
-    grid-template-rows: 1fr min-content min-content min-content 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr repeat(3, -webkit-min-content);
+    grid-template-rows: 1fr repeat(3, min-content);
     grid-template-areas: 
-        "i . ."
-        "i . pO"
-        "i . pT"
-        "i . pTh"
-        "i . .";
+        "i"
+        "pO"
+        "pT"
+        "pTh";
 
-    height: 380px;
-    width: 75vw;
+    gap: 20px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 100%;
     padding: 20px;
     border-radius: var(--Rad-ext);
 
@@ -196,10 +235,16 @@ article {
     margin: 30px auto;
 }
 
+.infoCards > * {
+    margin: 0px;
+}
+
 .ImgInfo {
     grid-area: i;
 
-    height: 340px;
+    height: auto;
+    width: 100%;
+    aspect-ratio: 4/5;
 
     background-image: url(../img/asset/Moi.jpg);
     background-size: cover;
@@ -223,8 +268,8 @@ article {
 /* Compétences */
 
 #skill {
-    margin-left: -30px;
-    margin-right: -30px;
+    margin-left: -20px;
+    margin-right: -20px;
     margin-bottom: 0px;
     overflow: hidden;
 }
@@ -314,4 +359,80 @@ transform: rotateZ(361deg); */
 
 #BckSlR {
     fill: blue;
+}
+
+
+@media (min-width: 600px) {
+
+    .heroban{
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr fit-content(100%) 1fr;
+        grid-template-areas: "txt arr illu";
+        align-items: center;
+    }
+
+    .herotxt {
+        align-self: center;
+    
+        text-align: left;
+    }
+
+    .herotxt > div > .h2 {
+        font-size: 1.25rem;
+    }
+
+    .heroarrow {
+        padding-bottom: 0px;
+    }
+
+    #main {
+        padding: 30px 30px 0px;
+    }
+
+    #liste {
+        margin-left: -30px;
+        margin-right: -30px;
+    }
+
+    .infoCards {
+        grid-template-columns: 5fr 6fr;
+        grid-template-rows: 1fr repeat(3, -webkit-min-content) 1fr;
+        grid-template-rows: 1fr repeat(3, min-content) 1fr;
+        grid-template-areas: 
+            "i ."
+            "i pO"
+            "i pT"
+            "i pTh"
+            "i .";
+
+        height: 380px;
+        width: 74vw;
+    }
+
+    .ImgInfo {
+        height: 340px;
+        width: auto;
+        aspect-ratio:unset;
+    }
+
+    #skill {
+        margin-left: -30px;
+        margin-right: -30px;
+    }
+}
+
+@media (min-width: 800px) {
+
+    .herotxt > div > .h2 {
+        font-size: 1.8rem;
+    }
+
+    .carou {
+        display: grid;
+    }
+
+    .sliderM {
+        display: none;
+    }
+
 }

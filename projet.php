@@ -39,7 +39,9 @@
 		<meta charset="utf-8"/>
 		<meta name="Author" lang="fr" content="Robin Vigier"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no"\/>
-		<link rel="stylesheet" type="text/css" href="style/root.css"/>
+		<meta name="theme-color" content="#264de4" media="(prefers-color-scheme: light)">
+		<meta name="theme-color" content="#1e1e1e" media="(prefers-color-scheme: dark)">
+        <link rel="stylesheet" type="text/css" href="style/root.css"/>
 		<link rel="stylesheet" type="text/css" href="style/style.css"/>
 
         <?php 
@@ -76,7 +78,7 @@
                 echo "<nav id=\"header\" class=\"headTop ChangeBgcolor\">\n";
             }
         ?>
-            <a href="index.php" class="logo">
+            <a href="index.php" class="logo Animtrans">
                 <img src="img/asset/Logo.svg" alt="Logo"/>
                 <p>Robin Vigier</p>
             </a>

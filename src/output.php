@@ -21,6 +21,25 @@ function echoSlider($liste)
 	return $reponse;
 };
 
+function echoSliderMobile($liste)
+{
+	$reponse = "";
+
+	$reponse.=sprintf("<div class=\"sliderM\">\n");
+
+	$i = 0;
+	foreach ($liste as $projet){
+		if ($i < 4){
+			$reponse.= $projet->affListeAcc();
+			$i++;
+		}
+	};
+	
+	$reponse.=sprintf("							</div>\n");
+
+	return $reponse;
+};
+
 // Function d'affichage de la liste
 function echoMainProj($liste)
 {

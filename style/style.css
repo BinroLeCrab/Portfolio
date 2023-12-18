@@ -149,15 +149,23 @@
     color: var(--White);
 }
 
-
+.contentTag {
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    width: 100%;
+    overflow: hidden;
+}
 
 .tagDiv {
     display: flex;
-    flex-wrap: wrap;
     gap: 5px;
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
 }
 
 .tag {
@@ -170,9 +178,9 @@
     border-radius: var(--Rad-ext);
     background-color: var(--Bck);
     font-size: 0.688rem;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
     font-weight: 500;
     color: var(--Txt);
 }
@@ -250,21 +258,19 @@
     transition: 0.3s;
 }
 
-.CardsProj:hover .cover{
-    height: 185px;
-}
-
 .titleCards {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 5px;
     align-items: start;
+    max-width: 100%;
+    overflow: hidden;
 }
 
 .tCards {
+    overflow: hidden;
+    white-space: nowrap;
     text-overflow: ellipsis;
-    height: 1.5rem;
-    max-width: 273px;
 }
 
 .date {
@@ -287,11 +293,12 @@
     height: 0px;
     overflow: hidden;
     transition: 0.3s;
+    display: none;
 }
 
 .voirProj {
     padding: 5px;
-    transform: translate(25%, -25%) scale(0) rotate(0Deg);
+    transform: translate(15%, -15%) scale(1) rotate(-40Deg);
     transition: 0.3s;
     transition-timing-function: cubic-bezier(0.870, 0.075, 0.300, 1.650);
     
@@ -300,16 +307,6 @@
 .voirProj > .arrowR {
     height: 20px;
     width: 20px;
-}
-
-.CardsProj:hover .cache {
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-}
-
-.CardsProj:hover .voirProj {
-    transform: translate(25%, -25%) scale(1) rotate(-40Deg);
 }
 
 
@@ -344,11 +341,7 @@
 
 figure {
     margin: 0px;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
     height: fit-content;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
     width: fit-content;
     text-align: center;
 }
@@ -437,8 +430,9 @@ footer .mask {
     .ouvert {
         height: 80px;
     }
+}
 
-    
+@media (min-width: 600px) {
 
     footer {
         grid-template-columns: 1fr -webkit-min-content;
@@ -477,6 +471,8 @@ footer .mask {
     }
 
     .Menu {
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
         height: fit-content;
         margin-top: 0px;
     }
@@ -485,6 +481,7 @@ footer .mask {
         width: 400px;
         height: 366px;
         padding: 20px;
+        gap: 10px;
     }
     
     .CardsProj:hover {
@@ -512,6 +509,8 @@ footer .mask {
     .titleCards {
         flex-direction: row;
         align-items: center;
+        overflow: visible;
+        gap: 10px;
     }
 
     .tagDiv {
@@ -534,11 +533,19 @@ footer .mask {
         height: 20px;
         width: 20px;
     }
+
+    .cache {
+        display: initial;
+    }
     
     .CardsProj:hover .cache {
         height: -webkit-fit-content;
         height: -moz-fit-content;
         height: fit-content;
+    }
+
+    .CardsProj:hover .voirProj {
+        transform: translate(25%, -25%) scale(1) rotate(-40Deg);
     }
 }
 

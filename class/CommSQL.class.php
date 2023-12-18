@@ -2,17 +2,17 @@
 
 class CommSQL {
     
-    // private $db = "portfolio_vigier";
-    // private $host = "localhost";
-    // private $user = "root";
-    // private $pwd = "";
-    // private $dsn = "mysql:host=localhost;dbname=portfolio_vigier";
+    private $db = "portfolio_vigier";
+    private $host = "localhost";
+    private $user = "root";
+    private $pwd = "";
+    private $dsn = "mysql:host=localhost;dbname=portfolio_vigier";
 
-    private $db = "ld1vz_portfolio";
-    private $host = "ld1vz.myd.infomaniak.com";
-    private $user = "ld1vz_userport";
-    private $pwd = "gC2SzA4g5DQR";
-    private $dsn = "mysql:host=ld1vz.myd.infomaniak.com;dbname=ld1vz_portfolio";
+    // private $db = "ld1vz_portfolio";
+    // private $host = "ld1vz.myd.infomaniak.com";
+    // private $user = "ld1vz_userport";
+    // private $pwd = "gC2SzA4g5DQR";
+    // private $dsn = "mysql:host=ld1vz.myd.infomaniak.com;dbname=ld1vz_portfolio";
 
     public function projet($id)
     {

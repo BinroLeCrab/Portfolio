@@ -37,6 +37,8 @@ require_once("src/output.php");
 		<meta charset="utf-8"/>
 		<meta name="Author" lang="fr" content="Robin Vigier"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no"\/>
+		<meta name="theme-color" content="#264de4" media="(prefers-color-scheme: light)">
+		<meta name="theme-color" content="#1e1e1e" media="(prefers-color-scheme: dark)">
 		<link rel="stylesheet" type="text/css" href="style/root.css"/>
 		<link rel="stylesheet" type="text/css" href="style/style.css"/>
 		<link rel="stylesheet" type="text/css" href="style/accueil.css"/>
@@ -52,7 +54,7 @@ require_once("src/output.php");
 			<img src="img/asset/Logo.svg" alt="Logo"/>
 		</div>
 		<nav id="header" class="headTop ChangeBgcolor">
-            <a href="index.php" class="logo">
+            <a href="index.php" class="Animtrans logo">
                 <img src="img/asset/Logo.svg" alt="Logo"/>
                 <p>Robin Vigier</p>
             </a>
@@ -125,6 +127,7 @@ require_once("src/output.php");
 							</svg>
 						</div>
 					</div>
+					<?= echoSliderMobile($_SESSION['BD']->listeP); ?>
 					<a href="projet.php" class ="Btn bloc noDeco center Animtrans">Voir plus de projets</a>
 				</article>
 				<article id="info">
@@ -196,7 +199,7 @@ require_once("src/output.php");
 			</section>
 		</main>
 		<footer>
-			<p id="NameLink">&#129497;Robin VIGIER | <a class="noDeco" href="index.php">Accueil</a> <a class="noDeco" href="projet.php">Projets</a> <a class="noDeco" href="index.php#info">À Propos</a> <!--Contact--></p>
+			<p id="NameLink">&#129497;Robin VIGIER <span class="mask">| <a class="noDeco" href="index.php">Accueil</a> <a class="noDeco" href="projet.php">Projets</a> <a class="noDeco" href="index.php#info">À Propos</a> <!--Contact--></span></p>
 			<a id="Email" class="noDeco" href="mailto:robin.vigier.pro@gmail.com">robin.vigier.pro@gmail.com</a>
 			<a id="Print" class="noDeco blue" href="resources/CV-VIGIER_Robin.pdf">Télécharger mon CV</a>
 			<p id="FootInfo">Site web codé en décembre 2023</p>
