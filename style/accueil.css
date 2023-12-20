@@ -242,9 +242,8 @@ article {
 .ImgInfo {
     grid-area: i;
 
-    height: auto;
     width: 100%;
-    aspect-ratio: 4/5;
+    aspect-ratio: 5 / 4;
 
     background-image: url(../img/asset/Moi.jpg);
     background-size: cover;
@@ -276,8 +275,7 @@ article {
 
 .Bendeau {
     position: relative;
-    height: 100px;
-    width: 110vw;
+    width: 200vw;
     margin-left: -5vw;
     margin-right: -5vw;
     padding: 10px 0px;
@@ -287,6 +285,14 @@ article {
 .BckBlue {
     background-color: var(--Blue);
     color: var(--White);
+}
+
+.decalageO {
+    left: -50px; 
+}
+
+.decalageT {
+    left: -100px; 
 }
 
 .BckBlack {
@@ -305,29 +311,22 @@ article {
 }
 
 .BendeauCont {
-    height: 80px;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
     width: fit-content;
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
 }
 
 .BendeauCont > span {
-    width: -webkit-max-content;
-    width: -moz-max-content;
     width: max-content;
     text-transform: uppercase;
     font-family: var(--Barracuda);
     font-weight: 500;
-    font-size: xxx-large;
-    font-stretch: condensed;
-    height: 39px;
+    font-size: 20px;
 }
 
 .BendeauIcon {
-    height: 70px;
+    height: 30px;
 }
 
 #BdC1 {
@@ -364,6 +363,68 @@ transform: rotateZ(361deg); */
 
 @media (min-width: 600px) {
 
+    #main {
+        padding: 30px 30px 0px;
+    }
+
+    #liste {
+        margin-left: -30px;
+        margin-right: -30px;
+    }
+
+    .infoCards {
+        grid-template-columns: 5fr 6fr;
+        grid-template-rows: 1fr repeat(3, fit-content(100%)) 1fr;
+        grid-template-areas: 
+            "i ."
+            "i pO"
+            "i pT"
+            "i pTh"
+            "i .";
+    }
+
+    .ImgInfo {
+        aspect-ratio:unset;
+    }
+
+    #skill {
+        margin-left: -30px;
+        margin-right: -30px;
+    }
+
+    .Bendeau {
+        height: 100px;
+        width: 110vw;
+    }
+
+    .BendeauCont {
+        height: 80px;
+        margin-left: -30%;
+        gap: 20px;
+    }
+    
+    .BendeauCont > span {
+        font-weight: 500;
+        font-size: 48px;
+        font-stretch: condensed;
+        height: 39px;
+    }
+    
+    .BendeauIcon {
+        height: 70px;
+    }
+
+    .decalageO {
+        left: 0px; 
+    }
+    
+    .decalageT {
+        left: 0px; 
+    }
+}
+
+@media (min-width: 650px) {
+
     .heroban{
         grid-template-rows: 1fr;
         grid-template-columns: 1fr fit-content(100%) 1fr;
@@ -385,47 +446,9 @@ transform: rotateZ(361deg); */
         padding-bottom: 0px;
     }
 
-    #main {
-        padding: 30px 30px 0px;
-    }
-
-    #liste {
-        margin-left: -30px;
-        margin-right: -30px;
-    }
-
-    .infoCards {
-        grid-template-columns: 5fr 6fr;
-        grid-template-rows: 1fr repeat(3, -webkit-min-content) 1fr;
-        grid-template-rows: 1fr repeat(3, min-content) 1fr;
-        grid-template-areas: 
-            "i ."
-            "i pO"
-            "i pT"
-            "i pTh"
-            "i .";
-
-        height: 380px;
-        width: 74vw;
-    }
-
-    .ImgInfo {
-        height: 340px;
-        width: auto;
-        aspect-ratio:unset;
-    }
-
-    #skill {
-        margin-left: -30px;
-        margin-right: -30px;
-    }
 }
 
 @media (min-width: 800px) {
-
-    .herotxt > div > .h2 {
-        font-size: 1.8rem;
-    }
 
     .carou {
         display: grid;
@@ -435,4 +458,28 @@ transform: rotateZ(361deg); */
         display: none;
     }
 
+}
+
+@media (min-width: 900px) {
+
+    .herotxt > div > .h2 {
+        font-size: 1.8rem;
+    }
+
+}
+
+
+@media (min-width: 1100px) {
+    .infoCards {
+
+        height: 350px;
+        width: 1025px;
+    }
+
+}
+
+@media (min-width: 1300px) {
+    .BendeauCont {
+        margin-left: 0px;
+    }
 }

@@ -44,6 +44,7 @@ require_once("src/output.php");
 		<link rel="stylesheet" type="text/css" href="style/accueil.css"/>
 		<script type="text/javascript" src="script/script.js"></script>
 		<title>Robin Vigier</title>
+		<meta name="description" content="Robin Vigier, Designer UI et Développeur Front-End, étudiant en BUT MMI." />
 
 		<link rel="icon" href="/img/asset/FaviconPortfolio.svg"/>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"></script>
@@ -61,7 +62,7 @@ require_once("src/output.php");
 			<div class="Menu">
 				<a href="index.php" class="NavLink Animtrans Active" id="NavAc">Accueil</a>
 				<a href="projet.php" class="NavLink Animtrans" id="NavProj">Projets</a>
-				<a href="index.php#info" class="NavLink" id="NavProp">À Propos</a>
+				<a href="#info" class="NavLink" id="NavProp">À Propos</a>
 				<!-- <a href="sandboxProj.html" class="NavLink Animtrans" id="NavCont">Contact</a> -->
 			</div>
 			<button class="Burger">
@@ -144,7 +145,7 @@ require_once("src/output.php");
 				<article id="skill">
 					<h2 class="h2">Je Maitrise ...</h2>
 					<div class="Comp">
-						<div class="Bendeau BckBlue" id="BdC1">
+						<div class="Bendeau BckBlue decalageO" id="BdC1">
 							<div class="BendeauCont">
 								<span>Dev Front-End</span><img class="BendeauIcon" src="img/outils/html.svg" alt=""/>
 								<span>Dev Front-End</span><img class="BendeauIcon" src="img/outils/css.svg" alt=""/>
@@ -154,7 +155,7 @@ require_once("src/output.php");
 								<span>Dev Front-End</span>
 							</div>
 						</div>
-						<div class="Bendeau BckBlack" id="BdC2">
+						<div class="Bendeau BckBlack decalageT" id="BdC2">
 							<div class="BendeauCont">
 								<span>Dev Back-End</span><img class="BendeauIcon" src="img/outils/php.svg" alt=""/>
 								<span>Dev Back-End</span><img class="BendeauIcon" src="img/outils/sql.svg" alt=""/>
@@ -164,7 +165,7 @@ require_once("src/output.php");
 								<span>Dev Back-End</span>
 							</div>
 						</div>
-						<div class="Bendeau BckGrey" id="BdC3">
+						<div class="Bendeau BckGrey decalageO" id="BdC3">
 							<div class="BendeauCont">
 								<span>UI Design</span><img class="BendeauIcon" src="img/outils/fig.svg" alt=""/>
 								<span>UI Design</span><img class="BendeauIcon" src="img/outils/hand.png" alt=""/>
@@ -174,17 +175,17 @@ require_once("src/output.php");
 								<span>UI Design</span><img class="BendeauIcon" src="img/outils/hand.png" alt=""/>
 							</div>
 						</div>
-						<div class="Bendeau BckWhite" id="BdC4">
+						<div class="Bendeau BckWhite decalageT" id="BdC4">
 							<div class="BendeauCont">
-								<span>UX Desing</span><img class="BendeauIcon" src="img/outils/loupe.png" alt=""/>
-								<span>UX Desing</span><img class="BendeauIcon" src="img/outils/loupe.png" alt=""/>
-								<span>UX Desing</span><img class="BendeauIcon" src="img/outils/loupe.png" alt=""/>
-								<span>UX Desing</span><img class="BendeauIcon" src="img/outils/loupe.png" alt=""/>
-								<span>UX Desing</span><img class="BendeauIcon" src="img/outils/loupe.png" alt=""/>
-								<span>UX Desing</span>
+								<span>UX Design</span><img class="BendeauIcon" src="img/outils/loupe.png" alt=""/>
+								<span>UX Design</span><img class="BendeauIcon" src="img/outils/loupe.png" alt=""/>
+								<span>UX Design</span><img class="BendeauIcon" src="img/outils/loupe.png" alt=""/>
+								<span>UX Design</span><img class="BendeauIcon" src="img/outils/loupe.png" alt=""/>
+								<span>UX Design</span><img class="BendeauIcon" src="img/outils/loupe.png" alt=""/>
+								<span>UX Design</span>
 							</div>
 						</div>
-						<div class="Bendeau BckBlue" id="BdC5">
+						<div class="Bendeau BckBlue decalageO" id="BdC5">
 							<div class="BendeauCont">
 								<span>Graphisme</span><img class="BendeauIcon" src="img/outils/ai.svg" alt=""/>
 								<span>Graphisme</span><img class="BendeauIcon" src="img/outils/ps.svg" alt=""/>

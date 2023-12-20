@@ -117,6 +117,10 @@ footer {
     background-color: var(--White);
 }
 
+p, a {
+    font-size: 0.875rem;
+}
+
 .h1 {
     font-family: var(--Barracuda);
     font-weight: 700;
@@ -159,14 +163,13 @@ a, button {
     margin-right: auto;
 }
 
-@media (min-width: 400px) {
-    
+@media (min-width: 600px) {
+    p, a {
+        font-size: 1rem;
+    }
 }
 
 @media (min-width: 800px) {
-    .h1 {
-        font-size: 5rem;
-    }
     
     .h2 {
         font-size: 2.188rem;
@@ -177,6 +180,11 @@ a, button {
     }
 }
 
+@media (min-width: 900px) {
+    .h1 {
+        font-size: 5rem;
+    }
+}
 
 /*   _____     _____
     |  _  |   |  _  |

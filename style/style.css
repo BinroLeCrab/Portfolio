@@ -435,9 +435,7 @@ footer .mask {
 @media (min-width: 600px) {
 
     footer {
-        grid-template-columns: 1fr -webkit-min-content;
         grid-template-columns: 1fr min-content;
-        grid-template-rows: -webkit-min-content -webkit-min-content 20px -webkit-min-content;
         grid-template-rows: min-content min-content 20px min-content;
         grid-template-areas: 
             "NL M"
@@ -446,12 +444,10 @@ footer .mask {
             "FI RF";
         gap: 0px;
     
-        padding: 40px 100px 50px;
+        padding: 40px 40px 50px;
     }
 
-    footer .mask {
-        display: initial;
-    }
+    
 }
 
 @media (min-width: 800px) {
@@ -546,6 +542,17 @@ footer .mask {
 
     .CardsProj:hover .voirProj {
         transform: translate(25%, -25%) scale(1) rotate(-40Deg);
+    }
+}
+
+@media (min-width: 900px) {
+    footer {
+        
+        padding: 40px 100px 50px;
+    }
+
+    footer .mask {
+        display: initial;
     }
 }
 
