@@ -341,7 +341,11 @@
 
 figure {
     margin: 0px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     text-align: center;
 }
@@ -435,7 +439,9 @@ footer .mask {
 @media (min-width: 600px) {
 
     footer {
+        grid-template-columns: 1fr -webkit-min-content;
         grid-template-columns: 1fr min-content;
+        grid-template-rows: -webkit-min-content -webkit-min-content 20px -webkit-min-content;
         grid-template-rows: min-content min-content 20px min-content;
         grid-template-areas: 
             "NL M"

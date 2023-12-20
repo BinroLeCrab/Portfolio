@@ -17,6 +17,7 @@ article {
     height: 100vh;
 
     display: grid;
+    grid-template-rows: 1fr 5fr 2fr -webkit-min-content;
     grid-template-rows: 1fr 5fr 2fr min-content;
     grid-template-columns: 1fr;
     grid-template-areas: 
@@ -186,6 +187,10 @@ article {
 
 .sliderM {
 
+    height: -webkit-fit-content;
+
+    height: -moz-fit-content;
+
     height: fit-content;
     width: 100%;
     display: grid;
@@ -311,6 +316,8 @@ article {
 }
 
 .BendeauCont {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     display: flex;
     align-items: center;
@@ -318,6 +325,8 @@ article {
 }
 
 .BendeauCont > span {
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
     text-transform: uppercase;
     font-family: var(--Barracuda);
