@@ -7,8 +7,12 @@ main {
 }
 
 .hero {
-    padding: 25vh 0vh 15vh;
+    padding: 25vh 5px 15vh;
     text-align: center;
+}
+
+.hero > .h1 {
+    font-size: 3rem;
 }
 
 .Liste {
@@ -19,11 +23,58 @@ main {
 
 .Grille{
     display: grid;
-    grid-template-columns: repeat(3, 400px); /*changer pour 2 puis 1 au responsive*/
-    /* grid-template-rows: repeat(auto-fill, minmax(366px, 366px)); */
+    grid-template-columns: fit-content(100%) ; /*? changer pour 2 puis 1 au responsive*/
     gap: 20px;
-    /* min-width: 400px;
-    width: 80vw;
-    max-width: 1240px; */
+}
+
+@media (min-width: 350px) {
+    .hero {
+        padding: 25vh 10px 15vh;
+    }
+}
+
+@media (min-width: 600px) {
+
+    .Grille{
+        grid-template-columns: repeat(2, fit-content(100%));
+    }
+
+    .hero {
+        padding: 25vh 20px 15vh;
+    }
+}
+
+@media (min-width: 800px) {
+    .Grille{
+        grid-template-columns: 400px;
+    }
+}
+
+@media (min-width: 850px) {
+    .Grille{
+        grid-template-columns: repeat(2, 400px);
+    }
+}
+
+@media (min-width: 1000px) {
+    .hero > .h1 {
+        font-size: 5rem;
+    }
+}
+
+@media (min-width: 1300px) {
+
+    .Grille{
+        grid-template-columns: repeat(3, 400px);
+    }
+
+}
+
+@media (min-width: 1680px) {
+
+    .Grille{
+        grid-template-columns: repeat(4, 400px);
+    }
+
 }
 

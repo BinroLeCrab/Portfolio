@@ -63,11 +63,13 @@ class Projet {
         $reponse.=sprintf("                                     <div class=\"voirProj\"><img class=\"arrowR\" src=\"img/asset/arrowN.svg\" alt=\"Voir le projet\" title=\"Voir le projet\"/></div>\n");
         $reponse.=sprintf("                                 </div>\n");
 
-        $reponse.=sprintf("                                 <div class=\"tagDiv\">\n");
+        $reponse.=sprintf("                                 <div class=\"contentTag\">\n");
+        $reponse.=sprintf("                                     <div class=\"tagDiv\">\n");
         foreach($this->tag as $value) 
         {
-            $reponse.=sprintf("                                     <p class=\"tag\" style=\"--Bck : %s; --Txt: %s;\">%s</p>\n", $value['couleur_label'], $value['couleur_texte'], $value['nom_label']);
+            $reponse.=sprintf("                                         <p class=\"tag\" style=\"--Bck : %s; --Txt: %s;\">%s</p>\n", $value['couleur_label'], $value['couleur_texte'], $value['nom_label']);
         }
+        $reponse.=sprintf("                                     </div>\n");
         $reponse.=sprintf("                                 </div>\n");
         
         $reponse.=sprintf("                                 <div class=\"titleCards\">\n");

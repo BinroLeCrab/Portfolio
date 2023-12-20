@@ -92,7 +92,7 @@
                         echo "<a href=\"projet.php\" class=\"NavLink Animtrans Active\" id=\"NavProj\">Projets</a>\n";
                     }
                 ?>
-				<a href="index.php#info" class="NavLink" id="NavProp">À Propos</a>
+				<a href="index.php#info" class="NavLink Animtrans" id="NavProp">À Propos</a>
 				<!-- <a href="sandboxProj.html" class="NavLink Animtrans" id="NavCont">Contact</a> -->
 			</div>
 			<button class="Burger">
@@ -110,7 +110,7 @@
             ?>
         </main>
         <footer>
-			<p id="NameLink">&#129497;Robin VIGIER | <a class="noDeco" href="index.php">Accueil</a> <a class="noDeco" href="projet.php">Projets</a> <a class="noDeco" href="index.php#info">À Propos</a> <!--Contact--></p>
+            <p id="NameLink">&#129497;Robin VIGIER <span class="mask">| <a class="noDeco" href="index.php">Accueil</a> <a class="noDeco" href="projet.php">Projets</a> <a class="noDeco" href="index.php#info">À Propos</a> <!--Contact--></span></p>
 			<a id="Email" class="noDeco" href="mailto:robin.vigier.pro@gmail.com">robin.vigier.pro@gmail.com</a>
 			<a id="Print" class="noDeco blue" href="resources/CV-VIGIER_Robin.pdf">Télécharger mon CV</a>
 			<p id="FootInfo">Site web codé en décembre 2023</p>
