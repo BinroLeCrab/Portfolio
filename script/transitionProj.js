@@ -10,7 +10,7 @@ gsap.set(".illuCouv", {
 });
 
 gsap.set(".Back",{
-    marginTop: "-20%"
+    marginTop: "-200%"
 });
 
 setTimeout(function(){

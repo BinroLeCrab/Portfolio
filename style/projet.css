@@ -24,7 +24,7 @@ main {
         "h"
         "g";
     gap: 2vh;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
 
 .illuCouv {
@@ -100,44 +100,35 @@ main {
     text-align: center;
 }
 
-/* .InfoProj * {
-    border: solid 1px blue;
-} */
-
-.InfoProj p {
-    max-width: 50vw;
-}
-
 article {
-    margin: 60px auto 60px auto;
+    margin: 60px auto;
     max-width: 1700px;
     text-align: left;
 }
 
-article p {
-    max-width: 50vw;
-}
-
 .ArticleTop {
     display: grid;
-    grid-template-columns: 1fr -webkit-max-content;
-    grid-template-columns: 1fr max-content;
-    grid-template-rows: repeat(2, -webkit-min-content);
-    grid-template-rows: repeat(2, min-content);
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, -webkit-min-content);
+    grid-template-rows: repeat(3, min-content);
     grid-template-areas: 
-        "d i"
-        "a i";
-    gap: 0px 40px;
+        "i"
+        "d"
+        "a";
+    gap: 20px 0px;
+
+    margin-top: 40px;
 }
 
 .ArticleTop > div {
     grid-area: d;
-
-    padding: 20px 0px 0px;
-    /* background-color: green; */
 }
 
 .ArticleTop > div > p {
+    margin-top: 0px;
+}
+
+.ArticleTop .Btn {
     margin-top: 0px;
 }
 
@@ -150,14 +141,14 @@ article p {
 .ArticleTop > .Apercu {
     grid-area: i;
 
-    max-width: 45vw;
     /* background-color: yellow; */
 }
 
 .visuels {
     --nbCol : 2;
     display: grid;
-    grid-template-columns: repeat(var(--nbCol), 1fr);
+    grid-template-rows: repeat(var(--nbCol), 1fr);
+    grid-template-columns: 1fr;
     width: 100%;
     gap: 20px;
 }
@@ -193,15 +184,15 @@ article p {
     --BG : var(--Blue);
     --Txt : var(--White);
     
-    display: flex;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(8, 32px) 1fr;
+    grid-template-rows: repeat(2, fit-content(100%));
+    gap: 10px 5px;
     align-items: center;
+    width: 100vw;
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
-    width: 100vw;
-    max-width: 100vw;
-    height: 86px;
     margin-bottom: 0px;
     margin-left: -6vw;
     padding: 9px 10px 9px;
@@ -209,20 +200,29 @@ article p {
 }
 
 .Equipe p {
+    grid-column: 1 /-1;
     text-transform: uppercase;
     font-family: var(--Barracuda);
     font-weight: 500;
-    font-size: 3.25rem;
+    font-size: 1.4rem;
     color: var(--Txt);
-    margin: 11px 0px 0px;
-    width: -webkit-fit-content ;
-    width: -moz-fit-content ;
-    width: fit-content ;
+    margin: 6px 0px 0px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
 }
 
 .Copains {
-    height: 100%;
+    height: 32px;
     border-radius: 100%;
+}
+
+@media (min-width: 350px) {
+
+    .Equipe p {
+        font-size: 1.5rem;
+    }
+
 }
 
 @media (min-width: 500px) {
@@ -234,6 +234,14 @@ article p {
 }
 
 @media (min-width: 600px) {
+
+    .hero {
+        margin-bottom: 50px;
+    }
+
+    .ArticleTop {
+        margin-top: 60px;
+    }
 
     .GridHeroRight {        
         grid-template-rows: 1fr;
@@ -253,12 +261,87 @@ article p {
         font-size: 3rem;
     }
 
+    .Equipe {
+        grid-template-columns: repeat(8, 60px) 1fr;
+        gap: 10px;
+    }
+    
+    .Equipe p {
+        font-size: 2rem;
+    }
+
+    .Copains {
+        height: 60px;
+    }
+
+}
+
+@media (min-width: 800px) {
+
+    .ArticleTop {
+        grid-template-columns: 1fr -webkit-max-content;
+        grid-template-columns: 1fr max-content;
+        grid-template-rows: repeat(2, -webkit-min-content);
+        grid-template-rows: repeat(2, min-content);
+        grid-template-areas: 
+            "d i"
+            "a i";
+        gap: 0px 40px;
+    }
+
+    .ArticleTop > .Apercu {
+        max-width: 45vw;
+    }
+
+    .ArticleTop > div {
+        padding: 20px 0px 0px;
+    }
+
+    .ArticleTop .Btn {
+        margin-top: 20px;
+    }
+
+    .visuels {
+        grid-template-columns: repeat(var(--nbCol), 1fr);
+        grid-template-rows: 1fr;
+    }
+
+    
+    .InfoProj p {
+        max-width: 50vw;
+    }
+    
+
+    article p {
+        max-width: 50vw;
+    }
+
+    .Equipe {
+        display: flex;
+        gap: 10px;
+        height: 50px;
+        margin-bottom: 0px;
+        margin-left: -6vw;
+        padding: 9px 10px 9px;
+    }
+
+    .Equipe p {
+        max-width: 100vw;
+    }
+
+    .Copains {
+        height: 100%;
+    }
 }
 
 @media (min-width: 900px) {
 
     .titleProj {
         font-size: 5rem;
+    }
+
+    .Equipe {
+        height: 60px;
     }
 
 }
@@ -305,4 +388,31 @@ article p {
     .outilDiv {
         margin: 0px;
     }
+
+    .Equipe {
+        height: 70px;
+    }
+
+    .Equipe p {
+        font-size: 2.5rem;
 }
+
+@media (min-width: 1400px) {
+
+    .Equipe {
+        height: 86px;
+        gap: 20px;
+    }
+
+    .Equipe p {
+        font-size: 3.25rem;
+        margin: 11px 0px 0px;
+        max-width: 100vw;
+    }
+}
+
+/*   _____     _____
+    |  _  |   |  _  |
+   -| | | |---| | | |-
+    |_____| 7 |_____|  ~B!nro~
+*/}
