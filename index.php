@@ -200,7 +200,7 @@ require_once("src/output.php");
 			</section>
 		</main>
 		<footer>
-			<p id="NameLink">&#129497;Robin VIGIER <span class="mask">| <a class="noDeco" href="index.php">Accueil</a> <a class="noDeco" href="projet.php">Projets</a> <a class="noDeco" href="index.php#info">À Propos</a> <!--Contact--></span></p>
+			<p id="NameLink"><span class="emoji">&#129497;</span>Robin VIGIER <span class="mask">| <a class="noDeco" href="index.php">Accueil</a> <a class="noDeco" href="projet.php">Projets</a> <a class="noDeco" href="index.php#info">À Propos</a> <!--Contact--></span></p>
 			<a id="Email" class="noDeco" href="mailto:robin.vigier.pro@gmail.com">robin.vigier.pro@gmail.com</a>
 			<a id="Print" class="noDeco blue" href="resources/CV-VIGIER_Robin.pdf">Télécharger mon CV</a>
 			<p id="FootInfo">Site web codé en décembre 2023</p>
