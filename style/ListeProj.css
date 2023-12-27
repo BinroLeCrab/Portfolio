@@ -70,7 +70,7 @@ main {
 
 }
 
-@media (min-width: 1680px) {
+@media (min-width: 1700px) {
 
     .Grille{
         grid-template-columns: repeat(4, 400px);

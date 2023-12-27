@@ -36,6 +36,8 @@ main {
     background-size: cover;
     border-radius: 30px;
 
+    overflow: hidden;
+
     grid-area: i;
 
     padding: 20px;
@@ -160,9 +162,13 @@ article {
 
 .asideL {
     display: grid;
-    grid-template-columns: 2fr 3fr;
+    grid-template-columns: 1fr;
     gap: 20px;
-    align-items: center;
+    justify-items: center;
+}
+
+.asideL > figure > figcaption, .asideR > figure > figcaption {
+    display: none;
 }
 
 .asideL .Apercu {
@@ -171,9 +177,9 @@ article {
 
 .asideR {
     display: grid;
-    grid-template-columns: 3fr 2fr;
+    grid-template-columns: 1fr;
     gap: 20px;
-    align-items: center;
+    justify-items: center;
 }
 
 .asideR .Apercu {
@@ -272,6 +278,36 @@ article {
 
     .Copains {
         height: 60px;
+    }
+
+}
+
+@media (min-width: 650px) {
+
+    .asideL {
+        grid-template-columns: 2fr 3fr;
+        grid-template-rows: 1fr;
+        justify-items: inherit;
+        align-items: center;
+    }
+    
+    .asideL .Apercu {
+        width: 80%;
+    }
+    
+    .asideR {
+        grid-template-columns: 3fr 2fr;
+        grid-template-rows: 1fr;
+        justify-items: inherit;
+        align-items: center;
+    }
+    
+    .asideR .Apercu {
+        width: 80%;
+    }
+
+    .asideL > figure > figcaption, .asideR > figure > figcaption {
+        display: inherit;
     }
 
 }
