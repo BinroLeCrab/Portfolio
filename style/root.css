@@ -16,6 +16,9 @@ html {
 
     /* Images */
     --Bkg-img : url(../img/asset/Paper.jpg);
+    --Bkg-img-2k : url(../img/asset/Paper_2k.jpg);
+    --Bkg-img-1k : url(../img/asset/Paper_1k.jpg);
+    --Bkg-img-700 : url(../img/asset/Paper_700.jpg);
 
     /* Couleur Principales*/
     --Black: #1e1e1e;

@@ -1,7 +1,7 @@
 /* Body */
 
 body {
-    background-image: var(--Bkg-img);
+    background-image: var(--Bkg-img-700);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -250,7 +250,7 @@ article {
     width: 100%;
     aspect-ratio: 5 / 4;
 
-    background-image: url(../img/asset/Moi.jpg);
+    background-image: url(../img/asset/Moi_600.jpg);
     background-size: cover;
     background-position: center;
 
@@ -457,6 +457,12 @@ transform: rotateZ(361deg); */
 
 }
 
+@media (min-width: 700px) {
+    body {
+        background-image: var(--Bkg-img-1k);
+    }
+}
+
 @media (min-width: 800px) {
 
     .carou {
@@ -477,6 +483,12 @@ transform: rotateZ(361deg); */
 
 }
 
+@media (min-width: 1000px) {
+    body {
+        background-image: var(--Bkg-img-2k);
+    }
+}
+
 
 @media (min-width: 1100px) {
     .infoCards {
@@ -490,5 +502,11 @@ transform: rotateZ(361deg); */
 @media (min-width: 1300px) {
     .BendeauCont {
         margin-left: 0px;
+    }
+}
+
+@media (min-width: 2000px) {
+    body {
+        background-image: var(--Bkg-img);
     }
 }
