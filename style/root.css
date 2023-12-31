@@ -164,6 +164,8 @@ a, button {
     display: block;
     color: var(--Blue);
     transition: 0.3s;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
 }
 
@@ -194,6 +196,8 @@ a, button {
     display: inline-block;
     color: var(--Black);
     transition: 0.3s;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
 }
 
