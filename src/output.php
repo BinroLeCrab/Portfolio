@@ -46,7 +46,7 @@ function echoMainProj($liste)
 	$reponse = "";
 
 	$reponse.=sprintf("<section class=\"hero\">\n");
-	$reponse.=sprintf("	<h1 class=\"h1 blue\">Mes Projets et Réalisations</h1>\n");
+	$reponse.=sprintf("	<h1 class=\"h1 bluecolor\">Mes Projets et Réalisations</h1>\n");
 	$reponse.=sprintf("	<p>Voici la galerie de mes derniers projets et réalisations, triés du plus récents au plus ancien !</p>\n");
 	$reponse.=sprintf("</section>\n");
 

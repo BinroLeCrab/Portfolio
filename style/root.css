@@ -159,8 +159,11 @@ a, button {
 .noDeco {
     text-decoration: none;
 }
+.bluecolor {
+    color: var(--Blue);
+}
 
-.blue {
+.bluelink {
     display: block;
     color: var(--Blue);
     transition: 0.3s;
