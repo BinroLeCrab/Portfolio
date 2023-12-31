@@ -149,7 +149,7 @@ article {
 .visuels {
     --nbCol : 2;
     display: grid;
-    grid-template-rows: repeat(var(--nbCol), 1fr);
+    /* grid-template-rows: repeat(var(--nbCol), 1fr); */
     grid-template-columns: 1fr;
     width: 100%;
     gap: 20px;
@@ -158,6 +158,10 @@ article {
 .Apercu {
     width: 100%;
     border-radius: var(--Rad-ext);
+}
+
+.LogoProj {
+    width: 50%;
 }
 
 .asideL {
@@ -184,6 +188,19 @@ article {
 
 .asideR .Apercu {
     width: 80%;
+}
+
+.role {
+    --nbCol : 2;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    text-align: center;
+}
+
+.role img {
+    width: 150px;
 }
 
 .Equipe {
@@ -342,6 +359,14 @@ article {
         grid-template-rows: 1fr;
     }
 
+    .deuxT {
+        grid-column: 1/var(--nbCol);
+    }
+
+    .LogoProj {
+        width: 88%;
+    }
+
     
     .InfoProj p {
         max-width: 50vw;
@@ -350,6 +375,11 @@ article {
 
     article p {
         max-width: 50vw;
+    }
+
+    .role {
+        grid-template-columns: repeat(var(--nbCol), 1fr);
+        grid-template-rows: 1fr;
     }
 
     .Equipe {
