@@ -120,6 +120,18 @@
     background-position: -10px 0px;
 }
 
+.NavLink::after {
+    display: block;
+    content: "";
+    background-color: var(--White);
+    height: 3px;
+    width: 0%;
+    transition: 0.3s;
+}
+
+.NavLink:hover::after {
+    width: 90%;
+}
 /* #NavAc {
     grid-area: Ac;
 }
@@ -411,11 +423,11 @@ footer .mask {
 .Active::after {
     content: "";
     display: block;
-    height: 5px;
-    width: 110%;
-    margin-left: -5%;
+    height: 3px;
+    width: 90%;
     background: var(--Blue);
 }
+
 /*p {
     cursor: url(../img/asset/Txt_perso.svg) 9 10, auto;
 }*/
