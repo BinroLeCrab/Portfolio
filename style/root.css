@@ -162,7 +162,33 @@ a, button {
 }
 
 .blue {
+    display: block;
     color: var(--Blue);
+    transition: 0.3s;
+    width: fit-content;
+}
+
+.blue:hover {
+    color: var(--White);
+}
+
+.blue::after {
+    /* position: relative; */
+    display: block;
+    background-color: var(--Blue);
+    background-position: -100%;
+    content: "";
+    height: 20px;
+    width: 0%;
+    margin-top: -20px;
+    margin-left: -1%;
+    transition: 0.3s;
+    /* z-index: 20; */
+    /* mix-blend-mode: difference; */
+}
+
+.blue:hover::after {
+    width: 102%;
 }
 
 .bloc {
