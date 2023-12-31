@@ -110,8 +110,8 @@
             ?>
         </main>
         <footer>
-            <p id="NameLink"><span class="emoji">&#129497;</span>Robin VIGIER <span class="mask">| <a class="noDeco" href="index.php">Accueil</a> <a class="noDeco" href="projet.php">Projets</a> <a class="noDeco" href="index.php#info">À Propos</a> <!--Contact--></span></p>
-			<a id="Email" class="noDeco" href="mailto:robin.vigier.pro@gmail.com">robin.vigier.pro@gmail.com</a>
+			<p id="NameLink"><span class="emoji">&#129497;</span>Robin VIGIER <span class="mask">| <a class="noDeco black" href="index.php">Accueil</a> <a class="noDeco black" href="projet.php">Projets</a> <a class="noDeco black" href="index.php#info">À Propos</a> <!--Contact--></span></p>
+			<a id="Email" class="noDeco black" href="mailto:robin.vigier.pro@gmail.com">robin.vigier.pro@gmail.com</a>
 			<a id="Print" class="noDeco blue" href="resources/CV-VIGIER_Robin.pdf">Télécharger mon CV</a>
 			<p id="FootInfo">Site web codé en décembre 2023</p>
 			<div id="ResFoot">
@@ -119,7 +119,6 @@
 				<a href="https://www.linkedin.com/in/robin-vigier-02353b267/" class="bloc"><img class="FootIcon" src="img/asset/IconLinkedinN.svg" alt="mon profil Linkedin"/></a>
 				<a href="https://bento.me/robinv" class="bloc"><img class="FootIcon" src="img/asset/IconBentoN.svg" alt="mon Bento"/></a>
 			</div>
-			<!-- <p><a href="https://bento.me/robinv">VIGIER Robin</a>, 2023. Illustrations&#x202F;: tous droits r&#xE9;serv&#xE9;s. <a href="index.php?MENTION">Mentions l&#xE9;gales</a>. -->
 		</footer>
 
         <script type="text/javascript" src="script/transition.js"></script>
