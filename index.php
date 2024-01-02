@@ -140,7 +140,7 @@ require_once("src/output.php");
 						<p class="ParaInfo" id="pITh">Je suis créatif, organisé, rigoureux, peut-être un peu perfectionniste, mais je me donne toujours à cœur dans les projets que j’entreprends.</p>
 						<!--Paragraphe-->
 					</div>
-					<a href="resources/CV-VIGIER_Robin.pdf" class ="Btn bloc noDeco center Animtrans">Télécharger mon CV</a>
+					<a href="resources/CV_VIGIER_Robin.pdf" class ="Btn bloc noDeco center Animtrans">Télécharger mon CV</a>
 				</article>
 				<article id="skill">
 					<h2 class="h2">Je Maitrise ...</h2>
@@ -202,7 +202,7 @@ require_once("src/output.php");
 		<footer>
 			<p id="NameLink"><span class="emoji">&#129497;</span>Robin VIGIER <span class="mask">| <a class="noDeco black" href="index.php">Accueil</a> <a class="noDeco black" href="projet.php">Projets</a> <a class="noDeco black" href="index.php#info">À Propos</a> <!--Contact--></span></p>
 			<a id="Email" class="noDeco black" href="mailto:robin.vigier.pro@gmail.com">robin.vigier.pro@gmail.com</a>
-			<a id="Print" class="noDeco blue" href="resources/CV-VIGIER_Robin.pdf">Télécharger mon CV</a>
+			<a id="Print" class="noDeco blue" href="resources/CV_VIGIER_Robin.pdf">Télécharger mon CV</a>
 			<p id="FootInfo">Site web codé en décembre 2023</p>
 			<div id="ResFoot">
 				<a href="https://github.com/BinroLeCrab/" class="bloc"><img class="FootIcon" src="img/asset/IconGithubN.svg" alt="mon GitHub"/></a>
