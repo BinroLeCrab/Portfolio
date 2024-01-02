@@ -163,7 +163,7 @@ a, button {
     color: var(--Blue);
 }
 
-.bluelink {
+.blue {
     display: block;
     color: var(--Blue);
     transition: 0.3s;
