@@ -122,6 +122,7 @@
 		</footer>
 
         <script type="text/javascript" src="script/transition.js"></script>
+        <script type="text/javascript" src="script/animProj.js"></script>
 		<script type="text/javascript" src="script/burger.js"></script>
         <?php 
             if($flag == 1) {
